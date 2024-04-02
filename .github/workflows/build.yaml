@@ -11,40 +11,12 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v3
 
-    - name: Checkout Ethernet library
-      uses: actions/checkout@v3
-      with:
-          repository: m5stack/M5-Ethernet
-          ref: master
-          path: CustomLibrary_M5-Ethernet # must contain string "Custom"
-
-    - name: Checkout M5GFX library
-      uses: actions/checkout@v3
-      with:
-          repository: m5stack/M5GFX
-          ref: master
-          path: CustomLibrary_M5GFX # must contain string "Custom"
-
-    - name: Checkout M5Unified library
-      uses: actions/checkout@v3
-      with:
-          repository: m5stack/M5Unified
-          ref: master
-          path: CustomLibrary_M5Unified # must contain string "Custom"
-
-    - name: Checkout M5AtomS3 library
-      uses: actions/checkout@v3
-      with:
-          repository: m5stack/M5AtomS3
-          ref: main
-          path: CustomLibrary_M5AtomS3 # must contain string "Custom"
-
     - name: Compile sketch
       uses: ArminJo/arduino-test-compile@v3
       with:
         arduino-board-fqbn: esp32:esp32:m5stack-atomS3
         platform-url: https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32_index.json
-        required-libraries: M5AtomS3@1.0.0
+        required-libraries: M5AtomS3@1.0.0,M5Unified@0.1.14,M5-Ethernet@4.0.0,M5GFX@0.1.15
         sketch-names: "*.ino"
         sketch-names-find-start: bbn_*/*
         extra-arduino-cli-args: "--warnings default"
