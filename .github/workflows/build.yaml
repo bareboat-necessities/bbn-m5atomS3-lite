@@ -36,7 +36,7 @@ jobs:
       uses: actions/checkout@v3
       with:
           repository: m5stack/M5AtomS3
-          ref: master
+          ref: main
           path: CustomLibrary_M5AtomS3 # must contain string "Custom"
 
     - name: Compile sketch
