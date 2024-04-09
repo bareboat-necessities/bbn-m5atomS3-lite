@@ -13,6 +13,9 @@ extern "C"
  * Label:    ISRG Root X1
  * Subject:  CN=ISRG Root X1,O=Internet Security Research Group,C=US
  * Domain(s): api.callmebot.com
+ * 
+ * A simple online generator that you can find here:
+ * https://mischianti.org/online-bearssl-certificate-trust-anchor-retriever-for-minimal-x509-verification-engine/
  */
 
 #define TAs_NUM 1
