@@ -11,6 +11,13 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v3
 
+    - name: Checkout EthernetLarge library
+      uses: actions/checkout@v3
+      with:
+          repository: OPEnSLab-OSU/EthernetLarge
+          ref: master
+          path: CustomLibrary_EthernetLarge # must contain string "Custom"
+
     - name: Compile sketch
       uses: ArminJo/arduino-test-compile@v3
       with:
