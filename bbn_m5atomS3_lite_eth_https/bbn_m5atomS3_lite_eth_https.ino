@@ -25,10 +25,16 @@
 
 #define SERVER "httpbin.org"
 
-#define SCK  22
-#define MISO 23
-#define MOSI 33
-#define CS   19
+#define SCK  5
+#define MISO 7
+#define MOSI 8
+#define CS   6
+
+// M5AtomLite
+//#define SCK  22
+//#define MISO 23
+//#define MOSI 33
+//#define CS   19
 
 byte mac[] = {0xDE, 0xAD, 0xBE, 0xEF, 0xFE, 0x99};
 
