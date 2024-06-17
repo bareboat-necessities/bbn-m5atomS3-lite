@@ -43,9 +43,12 @@ ads1115:
 sensor:
   - platform: ads1115
     multiplexer: 'A0_A1'
-    gain: 2.048
+    gain: 0.512
+    resolution: 16_BITS
     name: "ADS1115 Channel A0_A1"
     update_interval: 5s
+    filters: 
+      - multiply: 61.8182   # 680k/11k voltage divider
   - platform: bmp280
     address: 0x76
     temperature:
