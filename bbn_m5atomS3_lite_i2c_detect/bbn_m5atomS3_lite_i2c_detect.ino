@@ -249,29 +249,6 @@ void lookup(uint8_t addr) {
   }
 }
 
-/*
-int main() {
-    for (uint8_t addr = 0; addr <= 127; addr++) {
-        // Scan Address
-        // Assuming LinuxI2CDevice and its methods are defined elsewhere
-        LinuxI2CDevice dev = LinuxI2CDevice_new("/dev/i2c-1", addr);
-        if ((addr >= 0x30 && addr <= 0x37) || (addr >= 0x50 && addr <= 0x57)) {
-            if (LinuxI2CDevice_smbus_read_byte(&dev) == 0) {
-                printf("Found Address {:#02x}\n", addr);
-                lookup(addr);
-            }
-        } else {
-            if (LinuxI2CDevice_smbus_write_quick(&dev, 0) == 0) {
-                printf("Found Address {:#02x}\n", addr);
-                lookup(addr);
-            }
-        }
-    }
-    return 0;
-}
-
-*/
-
 void setup() {
   auto cfg = M5.config();
   AtomS3.begin(cfg);
