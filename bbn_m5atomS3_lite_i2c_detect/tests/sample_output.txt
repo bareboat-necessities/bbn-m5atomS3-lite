@@ -61,6 +61,35 @@ I2C device found at address 0x5C
   BMA180:  Accelerometer
   MPR121:  12-point capacitive touch sensor
   MPU6050:  Six-Axis (Gyro + Accelerometer) MEMS MotionTracking™ Devices
+I2C device found at address 0x68
+  AMG8833:  IR Thermal Camera Breakout
+  APDS-9250:  Digital RGB, IR and Ambient Light Sensor
+  APDS-9960:  IR/Color/Proximity Sensor
+  AS7262:  6-channel visible spectral_ID device with electronic shutter and smart interface
+  BQ32000:  Real-Time Clock (RTC)
+  BU9796:  Low Duty LCD Segment Drivers
+  DS1307:  64 x 8 Serial Real-Time Clock
+  DS1371:  I2C, 32-Bit Binary Counter Watchdog Clock
+  DS1371:  I2C, 32-Bit Binary Counter Watchdog Clock
+  DS3231:  Extremely Accurate RTC/TCXO/Crystal
+  ICM-20948:  9-Axis Motion Tracking device
+  ITG3200:  Gyro
+  L3GD20H:  gyroscope
+  LC709203F:  Smart LiB Gauge Battery Fuel Gauge LSI For 1‐Cell Lithium‐ion/ Polymer (Li+)
+  MCP3422:  18-Bit, Multi-Channel ΔΣ Analog-to-Digital Converter with I2CTM Interface and On-Board Reference
+  MPU6050:  Six-Axis (Gyro + Accelerometer) MEMS MotionTracking™ Devices
+  MPU-9250:  9-DoF IMU Gyroscope, Accelerometer and Magnetometer
+  MPU-9250:  9-DoF IMU Gyroscope, Accelerometer and Magnetometer
+  MPU-9250:  3-Axis Gyroscope and Accelerometer
+  MPU-9250:  3-Axis Gyroscope and Accelerometer
+  MPU-9250:  3-Axis Gyroscope and Accelerometer
+  MS5607:  Barometric Pressure
+  MS5607:  Barometric Pressure
+  PCF8523:  RTC
+  PCF8563:  Real-time clock/calendar
+  PCF8569:  LCD column driver for dot matrix displays
+  PCF8573:  Clock/calendar with Power Fail Detector
+  WITTY PI 3:  WITTY PI 3 (Mini) - REALTIME CLOCK (DS3231SN) AND POWER MANAGEMENT FOR RASPBERRY PI
 I2C device found at address 0x76
   BME280:  Temp/Barometric/Humidity
   BME680:  Low power gas, pressure, temperature & humidity sensor
@@ -79,4 +108,3 @@ I2C device found at address 0x76
   SPL06-007:  Digital Temperature/Pressure Sensor
   SPS30:  Particulate Matter Sensor for Air Quality Monitoring and Control
 done
-
