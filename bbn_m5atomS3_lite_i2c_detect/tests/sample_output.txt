@@ -1,0 +1,82 @@
+ESP-ROM:esp32s3-20210327
+Scanning...
+I2C device found at address 0x23
+  BH1750FVI:  Digital 16bit Serial Output Type Ambient Light Sensor IC
+  BMA150:  Digital triaxial acceleration sensor
+  BMA180:  Accelerometer
+  HW-061:  I2C Serial Interface LCD1602 Adapter
+  ICM-20948:  9-Axis Motion Tracking device
+  MA12070P:  Merus Multi level Class D Interated amplifier
+  MAG3110:  3-Axis Magnetometer
+  MAX17048:  3μA 1-Cell/2-Cell Fuel Gauge with ModelGauge
+  MAX17048:  3μA 1-Cell/2-Cell Fuel Gauge with ModelGauge
+  MCP23008:  8-Bit I/O Expander with Serial Interface I2C GPIO expander
+  MCP23017:  I2C GPIO expander
+  MCP3422:  18-Bit, Multi-Channel ΔΣ Analog-to-Digital Converter with I2CTM Interface and On-Board Reference
+  PCF8574:  Remote 8-Bit I/O Expander for I2C Bus
+  PCF8575:  Remote16-BIT I2C AND SMBus I/O Expander withInterrupt Output
+  PCF8577C:  32/64-segment LCD display driver
+  PCF8578:  Row/column LCD dot matrix driver/display
+  SAA4700:  VPS Dataline Processor
+  SAA5243P/E:  Computer controlled teletext circuit
+  SAA5243P/H:  Computer controlled teletext circuit
+  SAA5243P/K:  Computer controlled teletext circuit
+  TCA9554:  4 Low Voltage 8-Bit I 2C and SMBus Low-Power I/O Expander With Interrupt Output and Configuration Registers
+  TCS34725:  Color sensor
+  TDA4670:  Picture signal improvement circuit
+  TDA4671:  Picture signal improvement circuit
+  XD8574A:  I²C 8-Bit I/O Expander
+I2C device found at address 0x49
+  ADS1015:  4-channel 12-bit ADC
+  ADS1115:  4-channel 16-bit ADC
+  ADS7828:  12-Bit, 8-Channel Sampling ANALOG-TO-DIGITAL CONVERTER
+  ADXL345:  3-axis accelerometer
+  AHT10:  ASAIR Humidity and Temperature sensor
+  AS7262:  6-channel visible spectral_ID device with electronic shutter and smart interface
+  INA219:  26V Bi-Directional High-Side Current/Power/Voltage Monitor
+  INA260:  Precision Digital Current and Power Monitor With Low-Drift, Precision Integrated Shunt
+  IS31FL3731:  144-LED Audio Modulated Matrix LED Driver (CharliePlex)
+  LM75b:  Digital temperature sensor and thermal watchdog
+  LPS22HB:  MEMS nano pressure sensor
+  LSM303:  Triple-axis Accelerometer+Magnetometer (Compass)
+  PCF8574:  Remote 8-Bit I/O Expander
+  STDS75:  STDS75 temperature sensor
+  STMPE610:  Resistive Touch controller
+  TMP102:  Temperature sensor
+  TPA2016:  2.8-W/Ch Stereo Class-D Audio Amplifier With Dynamic Range Compression and Automatic Gain Control
+  TSL2561:  Light sensor
+  TSL2591:  Light sensor
+  UMA1014T:  Low-power frequency synthesizer for mobile radio communications
+I2C device found at address 0x53
+  ADXL345:  3-axis accelerometer
+  AHT10:  ASAIR Humidity and Temperature sensor
+  AHT20:  Humidity and Temperature Sensor
+  ST25DV16K:  Dynamic NFC/RFID tag IC with 4-, 16-, or 64-Kbit EEPROM, and fast transfer mode capability
+I2C device found at address 0x5C
+  AM2315:  Humidity/Temp sensor
+  AMG8833:  IR Thermal Camera Breakout
+  APDS-9250:  Digital RGB, IR and Ambient Light Sensor
+  BH1750FVI:  Digital 16bit Serial Output Type Ambient Light Sensor IC
+  BMA150:  Digital triaxial acceleration sensor
+  BMA180:  Accelerometer
+  MPR121:  12-point capacitive touch sensor
+  MPU6050:  Six-Axis (Gyro + Accelerometer) MEMS MotionTracking™ Devices
+I2C device found at address 0x76
+  BME280:  Temp/Barometric/Humidity
+  BME680:  Low power gas, pressure, temperature & humidity sensor
+  BME680:  Low power gas, pressure, temperature & humidity sensor
+  BME688:  Digital low power gas, pressure, temperature and humidity sensor with AI
+  BME688:  Digital low power gas, pressure, temperature and humidity sensor with AI
+  BMP085:  Temp/Barometric
+  BMP180:  Temp/Barometric
+  BMP280:  Temp/Barometric
+  BNO055:  Absolute Orientation Sensor
+  MS5607:  Barometric Pressure
+  MS5611:  Barometric Pressure
+  MS5611:  Barometric Pressure
+  NE5751:  Audio processor for IV communication
+  PCA9539:  16-bit I/O expander with interrupt and reset
+  SPL06-007:  Digital Temperature/Pressure Sensor
+  SPS30:  Particulate Matter Sensor for Air Quality Monitoring and Control
+done
+
