@@ -2,6 +2,9 @@
   Copyright 2024, Mikhail Grushinskiy
 
   Adapted from: https://github.com/bareboat-necessities/rust-modules/tree/main/rust-i2c-scan
+
+  TODO: Also check whoami registers.
+  See: https://github.com/technoblogy/ulisp-i2c-detective/blob/main/I2CDetective.lisp
   
 */
 
