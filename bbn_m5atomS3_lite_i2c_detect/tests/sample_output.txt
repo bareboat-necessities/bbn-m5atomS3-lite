@@ -11,6 +11,57 @@ I2C device found at address 0x23
   SAA4700:  VPS Dataline Processor
   TCA9554:  4 Low Voltage 8-Bit I 2C and SMBus Low-Power I/O Expander With Interrupt Output and Configuration Registers
   XD8574A:  I²C 8-Bit I/O Expander
+I2C device found at address 0x29
+  BNO055:  Absolute Orientation Sensor
+  CAP1188:  8-channel Capacitive Touch
+  DS1841:  Temperature-Controlled, NV, I2C, Logarithmic Resistor
+  DS1881:  Dual NV Audio Taper Digital Potentiometer
+  DS3502:  High-Voltage, NV, I2C POT
+  MCP4532:  7/8-Bit Single/Dual I2C Digital POT with Volatile Memory
+  TCS34725:  Color sensor
+  TSL2591:  Light sensor
+ *VL53L0X:  Time Of Flight distance sensor
+  VL6180X:  Time Of Flight distance sensor
+I2C device found at address 0x40
+  HDC1080:  Low Power, High Accuracy Digital Humidity Sensor with Temperature Sensor
+  HTU21D-F:  Humidity/Temp Sensor
+  HTU31D:  Digital Relative Humidity & Temperature Sensor
+  INA219:  26V Bi-Directional High-Side Current/Power/Voltage Monitor
+  INA260:  Precision Digital Current and Power Monitor With Low-Drift, Precision Integrated Shunt
+  LM25066:  PMBus power management IC
+  NE5751:  Audio processor for IV communication
+  PCA9685:  16-channel PWM driver default address
+  PCF8574:  Remote 8-Bit I/O Expander
+  Si7021:  Humidity/Temp sensor
+  TDA8421:  Audio processor with loudspeaker and headphone channel
+  TDA9860:  Hi-fi audio processor
+  TEA6300:  Sound fader control and preamplifier/source selector
+  TEA6320:  4-input tone/volume controller with fader control
+  TEA6330:  Sound fader control circuit for car radios
+  TMP006:  Infrared Thermopile Sensor in Chip-Scale Package
+  TMP007:  IR Temperature sensor
+I2C device found at address 0x44
+  INA219:  26V Bi-Directional High-Side Current/Power/Voltage Monitor
+  INA260:  Precision Digital Current and Power Monitor With Low-Drift, Precision Integrated Shunt
+  ISL29125:  Digital Red, Green and Blue Color Light Sensor with IR Blocking Filter
+  LM25066:  PMBus power management IC
+  PCA9685:  16-channel PWM driver default address
+  PCF8574:  Remote 8-Bit I/O Expander
+  SHT30:  Humidity/Temp sensor
+  SHT31:  Humidity/Temp sensor
+  SHT40:  Humidity/Temp sensor
+  STMPE610:  Resistive Touch controller
+  STMPE811:  Resistive touchscreen controller
+  TDA4670:  Picture signal improvement circuit
+  TDA4671:  Picture signal improvement circuit
+  TDA4672:  Picture signal improvement (PSI) circuit
+  TDA4680:  Video processor
+  TDA4687:  Video processor
+  TDA4688:  Video processor
+  TDA4780:  Video control with gamma control
+  TDA8442:  Interface for colour decoder
+  TMP006:  Infrared Thermopile Sensor in Chip-Scale Package
+  TMP007:  IR Temperature sensor
 I2C device found at address 0x49
   ADS1015:  4-channel 12-bit ADC
   ADS1115:  4-channel 16-bit ADC
@@ -33,11 +84,6 @@ I2C device found at address 0x53
   MB85RC:  Ferroelectric RAM
   PCA9685:  16-channel PWM driver default address
   ST25DV16K:  Dynamic NFC/RFID tag IC with 4-, 16-, or 64-Kbit EEPROM, and fast transfer mode capability
-I2C device found at address 0x5C
-  AM2315:  Humidity/Temp sensor
-  BH1750FVI:  Digital 16bit Serial Output Type Ambient Light Sensor IC
-  MPR121:  12-point capacitive touch sensor
-  PCA9685:  16-channel PWM driver default address
 I2C device found at address 0x68
   AMG8833:  IR Thermal Camera Breakout
   BQ32000:  Real-Time Clock (RTC)
@@ -48,27 +94,21 @@ I2C device found at address 0x68
   ITG3200:  Gyro
   LTC4151:  High voltage (7-80V) current and voltage monitor
   MCP3422:  18-Bit, Multi-Channel ΔΣ Analog-to-Digital Converter with I2CTM Interface and On-Board Reference
-  MPU6050:  Six-Axis (Gyro + Accelerometer) MEMS MotionTracking™ Devices
-  MPU-9250:  9-DoF IMU Gyroscope, Accelerometer and Magnetometer
-  MPU-9250:  3-Axis Gyroscope and Accelerometer
+  MPU6050:  6-Axis (Gyro + Accelerometer) MEMS MotionTracking™ Devices
+ *MPU6886:  6-Axis (Gyro + Accelerometer) MEMS MotionTracking™ Devices
+  MPU9250:  9-DoF IMU Gyroscope, Accelerometer and Magnetometer
+  MPU9250:  3-Axis Gyroscope and Accelerometer
   PCA9685:  16-channel PWM driver default address
   PCF8523:  RTC
   PCF8573:  Clock/calendar with Power Fail Detector
   WITTY PI 3:  WITTY PI 3 (Mini) - REALTIME CLOCK (DS3231SN) AND POWER MANAGEMENT FOR RASPBERRY PI
-I2C device found at address 0x76
-  BME280:  Temp/Barometric/Humidity
-  BME680:  Low power gas, pressure, temperature & humidity sensor
-  BME688:  Digital low power gas, pressure, temperature and humidity sensor with AI
-  BMP280:  Temp/Barometric
+I2C device found at address 0x70
   HT16K33:  LED Matrix Driver
-  MS5607:  Barometric Pressure
-  MS5611:  Barometric Pressure
-  PCA9539:  16-bit I/O expander with interrupt and reset
   PCA9541:  2-1 I2C bus arbiter
   PCA9685:  16-channel PWM driver default address
-  SPL06-007:  Digital Temperature/Pressure Sensor
+ *QMP6988:  Air pressure sensor
+  SHTC3:  Humidity & Temperature Sensor
   TCA9548:  1-to-8 I2C Multiplexer
   TCA9548A:  Low-Voltage8-Channel I2CSwitchwithReset
   XD8574:  I²C 8-Bit I/O Expander
 done
-
