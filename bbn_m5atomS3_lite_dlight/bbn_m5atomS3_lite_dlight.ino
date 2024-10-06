@@ -10,7 +10,7 @@ void setup() {
   auto cfg = M5.config();
   AtomS3.begin(cfg);
   Wire.begin();
-  Serial.begin(115200);
+  Serial.begin(4800);
   sensor.begin();
 
   // CONTINUOUSLY_H_RESOLUTION_MODE
@@ -25,5 +25,5 @@ void setup() {
 void loop() {
   uint16_t lux = sensor.getLUX();
   Serial.printf("lux: %d\n", lux);
-  delay(200);
+  delay(1000);
 }
