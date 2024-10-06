@@ -202,7 +202,7 @@ static I2cDeviceInfo I2C_SCANNER_KNOWN_DEVICES[] = {
   {"STDS75", "STDS75 temperature sensor", (uint8_t[]){0x49, 0x48, 0x4c, 0x4d, 0x4b, 0x4a, 0x4f, 0x4e, 0x0}, (uint8_t)0x0, (uint8_t)0x0},
   {"STMPE610", "Resistive Touch controller", (uint8_t[]){0x44, 0x41, 0x0}, (uint8_t)0x0, (uint8_t)0x0},
   {"STMPE811", "Resistive touchscreen controller", (uint8_t[]){0x44, 0x41, 0x0}, (uint8_t)0x0, (uint8_t)0x0},
-  {"STM32F030F4P6", "Encoder", (uint8_t[]){0x40, 0x0}, (uint8_t)0x0, (uint8_t)0x0},
+  {"STM32F030F4P6", "Encoder", (uint8_t[]){0x40, 0x41, 0x0}, (uint8_t)0x0, (uint8_t)0x0},
   {"STM32G030F6", "AIN4-20mA Unit", (uint8_t[]){0x55, 0x0}, (uint8_t)0x0, (uint8_t)0x0},
   {"TCA9548", "1-to-8 I2C Multiplexer", (uint8_t[]){0x71, 0x72, 0x77, 0x73, 0x70, 0x76, 0x75, 0x74, 0x0}, (uint8_t)0x0, (uint8_t)0x0},
   {"TCA9548A", "Low-Voltage8-Channel I2CSwitchwithReset", (uint8_t[]){0x71, 0x72, 0x77, 0x73, 0x70, 0x76, 0x75, 0x74, 0x0}, (uint8_t)0x0, (uint8_t)0x0},
@@ -285,7 +285,7 @@ void setup() {
   Serial.begin(9600);
   Wire.begin();
   Wire.setClock(100000);
-  delay(10);
+  delay(200);
   byte error, address;
   int nDevices;
   Serial.println("Scanning...");
