@@ -18,6 +18,13 @@ jobs:
           ref: master
           path: CustomLibrary_EthernetLarge # must contain string "Custom"
 
+    - name: Checkout M5Unit-ENV library
+      uses: actions/checkout@v3
+      with:
+          repository: m5stack/M5Unit-ENV
+          ref: master
+          path: CustomLibrary_M5Unit-ENV # must contain string "Custom"
+
     - name: Compile sketch
       uses: ArminJo/arduino-test-compile@v3
       with:
