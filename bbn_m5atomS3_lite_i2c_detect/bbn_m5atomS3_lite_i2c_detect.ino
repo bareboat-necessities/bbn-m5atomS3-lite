@@ -254,7 +254,22 @@ void lookup(uint8_t addr) {
     const uint8_t *addresses = I2C_SCANNER_KNOWN_DEVICES[i].addresses;
     for (size_t j = 0; addresses[j] != 0x0; j++) {
       if (addr == addresses[j]) {
-        Serial.printf("  %s:  %s\n", I2C_SCANNER_KNOWN_DEVICES[i].name, I2C_SCANNER_KNOWN_DEVICES[i].description);
+        bool whoami_match = false;
+        const uint8_t whoami_reg = I2C_SCANNER_KNOWN_DEVICES[i].whoami_reg;
+        const uint8_t whoami_id = I2C_SCANNER_KNOWN_DEVICES[i].whoami_id;
+        if (whoami_reg != 0x0 || whoami_id != 0x0) {
+          Wire.beginTransmission(addr);
+          Wire.write(whoami_reg);
+          if (Wire.endTransmission(false) == 0) {
+            Wire.requestFrom(addr, 1);
+            whoami_match = Wire.read() == whoami_id;
+          }
+        }
+        if (whoami_match) {
+          Serial.printf(" *%s:  %s\n", I2C_SCANNER_KNOWN_DEVICES[i].name, I2C_SCANNER_KNOWN_DEVICES[i].description);
+        } else {
+          Serial.printf("  %s:  %s\n", I2C_SCANNER_KNOWN_DEVICES[i].name, I2C_SCANNER_KNOWN_DEVICES[i].description);
+        }
       }
     }
   }
