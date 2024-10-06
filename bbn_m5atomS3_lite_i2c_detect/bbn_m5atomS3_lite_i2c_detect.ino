@@ -33,6 +33,7 @@ static I2cDeviceInfo I2C_SCANNER_KNOWN_DEVICES[] = {
   {"ADXL345", "3-axis accelerometer", (uint8_t[]){0x53, 0x1d, 0x0}, (uint8_t)0x0, (uint8_t)0xE5},
   {"AHT10", "ASAIR Humidity and Temperature sensor", (uint8_t[]){0x38, 0x0}, (uint8_t)0x0, (uint8_t)0x0},
   {"AHT20", "Humidity and Temperature Sensor", (uint8_t[]){0x38, 0x0}, (uint8_t)0x0, (uint8_t)0x0},
+  {"AK8963", "3-axis magnetometer", (uint8_t[]){0xe, 0xd, 0xc, 0xf, 0x0}, (uint8_t)0x0, (uint8_t)0x48},
   {"AK8975", "3-axis magnetometer", (uint8_t[]){0xe, 0xd, 0xc, 0xf, 0x0}, (uint8_t)0x0, (uint8_t)0x0},
   {"AM2315", "Humidity/Temp sensor", (uint8_t[]){0x5c, 0x0}, (uint8_t)0x0, (uint8_t)0x0},
   {"AMG8833", "IR Thermal Camera Breakout", (uint8_t[]){0x68, 0x69, 0x0}, (uint8_t)0x0, (uint8_t)0x0},
