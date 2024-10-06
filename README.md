@@ -22,4 +22,6 @@ The sensors stream NMEA-0183 XDR sentences via USB
 - Compass
 - Boat Pitch and Roll
 
+## Project Home
 
+https://bareboat-necessities.github.io/
