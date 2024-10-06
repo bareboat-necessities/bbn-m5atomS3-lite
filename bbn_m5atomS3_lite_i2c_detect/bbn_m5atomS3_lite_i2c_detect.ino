@@ -161,7 +161,7 @@ static I2cDeviceInfo I2C_SCANNER_KNOWN_DEVICES[] = {
   {"PM2008", "Laser particle sensor", (uint8_t[]){0x28, 0x0}, (uint8_t)0x0, (uint8_t)0x0},
   {"PMSA003I", "Digital universal partical concentration sensor", (uint8_t[]){0x12, 0x0}, (uint8_t)0x0, (uint8_t)0x0},
   {"PN532", "NFC/RFID reader", (uint8_t[]){0x48, 0x0}, (uint8_t)0x0, (uint8_t)0x0},
-  {"QMP6988", "Air pressure sensor", (uint8_t[]){0x70, 0x0}, (uint8_t)0x0, (uint8_t)0x0},
+  {"QMP6988", "Air pressure sensor", (uint8_t[]){0x70, 0x0}, (uint8_t)0xd1, (uint8_t)0x5c},
   {"SAA1064", "4-digit LED driver", (uint8_t[]){0x38, 0x3b, 0x39, 0x3a, 0x0}, (uint8_t)0x0, (uint8_t)0x0},
   {"SAA2502", "MPEG audio source decoder", (uint8_t[]){0x30, 0x31, 0x0}, (uint8_t)0x0, (uint8_t)0x0},
   {"SAA4700", "VPS Dataline Processor", (uint8_t[]){0x23, 0x21, 0x0}, (uint8_t)0x0, (uint8_t)0x0},
