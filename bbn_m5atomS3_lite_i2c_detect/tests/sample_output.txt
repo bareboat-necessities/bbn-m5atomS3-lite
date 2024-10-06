@@ -33,6 +33,7 @@ I2C device found at address 0x40
   PCA9685:  16-channel PWM driver default address
   PCF8574:  Remote 8-Bit I/O Expander
   Si7021:  Humidity/Temp sensor
+  STM32F030F4P6:  Encoder
   TDA8421:  Audio processor with loudspeaker and headphone channel
   TDA9860:  Hi-fi audio processor
   TEA6300:  Sound fader control and preamplifier/source selector
