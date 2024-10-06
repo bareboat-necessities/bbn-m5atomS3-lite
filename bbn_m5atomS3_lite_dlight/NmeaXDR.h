@@ -49,6 +49,28 @@
      could be more
 */
 
+/*
+  Bareboat Necessities Sensors NMEA-0183 XDR Sentences:
+
+  NMEA-0183 Sender 
+     BB
+
+  Transducer Types:
+     X - Illuminance
+      
+  Illuminance 
+    Transducer type: X (Lux)
+    Unit of measurement: L (Lux)
+    Transducer name prefix:
+      ILLU - Illuminance Lux
+
+  Examples:
+
+  Illuminance:
+  $BBXDR,X,56.0,L,ILLU*NN
+
+*/
+
 #include "NmeaChecksum.h"
 
 void gen_nmea0183_xdr(const char *nmea_fmt, float value) {
