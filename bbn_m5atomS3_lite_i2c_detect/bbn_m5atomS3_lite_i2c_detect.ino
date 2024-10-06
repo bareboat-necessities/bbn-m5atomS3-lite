@@ -39,6 +39,7 @@ static I2cDeviceInfo I2C_SCANNER_KNOWN_DEVICES[] = {
   {"AMG8833", "IR Thermal Camera Breakout", (uint8_t[]){0x68, 0x69, 0x0}, (uint8_t)0x0, (uint8_t)0x0},
   {"APDS-9250", "Digital RGB, IR and Ambient Light Sensor", (uint8_t[]){0x52, 0x0}, (uint8_t)0x0, (uint8_t)0x0},
   {"APDS-9960", "IR/Color/Proximity Sensor", (uint8_t[]){0x39, 0x0}, (uint8_t)0x0, (uint8_t)0x0},
+  {"AS3935", "Lightning Detector Sensor", (uint8_t[]){0x3, 0x0}, (uint8_t)0x0, (uint8_t)0x0},   
   {"AS7262", "6-channel visible spectral_ID device with electronic shutter and smart interface", (uint8_t[]){0x49, 0x0}, (uint8_t)0x0, (uint8_t)0x0},
   {"AT24C02N", "Two-wire Serial EEPROM 2K (256 x 8)", (uint8_t[]){0x57, 0x54, 0x50, 0x56, 0x53, 0x55, 0x52, 0x51, 0x0}, (uint8_t)0x0, (uint8_t)0x0},
   {"AT24C64", "2-Wire Serial EEPROM 64K (8192 x 8)", (uint8_t[]){0x57, 0x54, 0x50, 0x56, 0x53, 0x55, 0x52, 0x51, 0x0}, (uint8_t)0x0, (uint8_t)0x0},
