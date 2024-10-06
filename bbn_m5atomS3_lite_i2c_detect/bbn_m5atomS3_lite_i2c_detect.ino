@@ -185,6 +185,7 @@ static I2cDeviceInfo I2C_SCANNER_KNOWN_DEVICES[] = {
   {"SH1106", "132 X 64 Dot Matrix OLED/PLED  Preliminary Segment/Common Driver with Controller", (uint8_t[]){0x3c, 0x3d, 0x0}, (uint8_t)0x0, (uint8_t)0x0},
   {"SHT30", "Humidity/Temp sensor", (uint8_t[]){0x44, 0x45, 0x0}, (uint8_t)0x0, (uint8_t)0x0},
   {"SHT31", "Humidity/Temp sensor", (uint8_t[]){0x44, 0x45, 0x0}, (uint8_t)0x0, (uint8_t)0x0},
+  {"SHT40", "Humidity/Temp sensor", (uint8_t[]){0x44, 0x45, 0x0}, (uint8_t)0x0, (uint8_t)0x0},
   {"SHTC3", "Humidity & Temperature Sensor", (uint8_t[]){0x70, 0x0}, (uint8_t)0x0, (uint8_t)0x0},
   {"SI1132", "UV Index and Ambient Light Sensor", (uint8_t[]){0x60, 0x0}, (uint8_t)0x0, (uint8_t)0x0},
   {"SI1133", "UV Index and Ambient Light Sensor", (uint8_t[]){0x55, 0x52, 0x0}, (uint8_t)0x0, (uint8_t)0x0},
