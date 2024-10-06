@@ -242,7 +242,7 @@ static I2cDeviceInfo I2C_SCANNER_KNOWN_DEVICES[] = {
   {"VEML6070", "UVA Light Sensor with I2C Interface", (uint8_t[]){0x38, 0x39, 0x0}, (uint8_t)0x0, (uint8_t)0x0},
   {"VEML6075", "UVA and UVB Light Sensor", (uint8_t[]){0x10, 0x0}, (uint8_t)0x0, (uint8_t)0x0},
   {"VEML7700", "High Accuracy Ambient Light Sensor", (uint8_t[]){0x10, 0x0}, (uint8_t)0x0, (uint8_t)0x0},
-  {"VL53L0x", "Time Of Flight distance sensor", (uint8_t[]){0x29, 0x0}, (uint8_t)0x0, (uint8_t)0x0},
+  {"VL53L0X", "Time Of Flight distance sensor", (uint8_t[]){0x29, 0x0}, (uint8_t)0xc0, (uint8_t)0xee},
   {"VL6180X", "Time Of Flight distance sensor", (uint8_t[]){0x29, 0x0}, (uint8_t)0x0, (uint8_t)0x0},
   {"VML6075", "UVA and UVB Light Sensor with I2C Interface", (uint8_t[]){0x10, 0x0}, (uint8_t)0x0, (uint8_t)0x0},
   {"WITTY PI 3", "WITTY PI 3 (Mini) - REALTIME CLOCK (DS3231SN) AND POWER MANAGEMENT FOR RASPBERRY PI", (uint8_t[]){0x68, 0x69, 0x0}, (uint8_t)0x0, (uint8_t)0x0},
