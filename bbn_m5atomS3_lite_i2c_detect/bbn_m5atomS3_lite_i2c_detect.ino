@@ -179,6 +179,7 @@ static I2cDeviceInfo I2C_SCANNER_KNOWN_DEVICES[] = {
   {"SCD40", "CO2 sensor - 2000ppm", (uint8_t[]){0x62, 0x0}, (uint8_t)0x0, (uint8_t)0x0},
   {"SCD40-D-R2", "Miniaturized CO2 Sensor", (uint8_t[]){0x62, 0x0}, (uint8_t)0x0, (uint8_t)0x0},
   {"SCD41", "CO2 sensor", (uint8_t[]){0x62, 0x0}, (uint8_t)0x0, (uint8_t)0x0},
+  {"SEN0575", "DFRobot Rain Sensor", (uint8_t[]){0x1d, 0x0}, (uint8_t)0x0, (uint8_t)0x0},
   {"SEN0590", "DFRobot Laser Ranging Sensor 4m", (uint8_t[]){0x74, 0x0}, (uint8_t)0x0, (uint8_t)0x0},
   {"SEN15892", "Zio Qwiic Loudness Sensor", (uint8_t[]){0x38, 0x0}, (uint8_t)0x0, (uint8_t)0x0},
   {"SEN17374", "Sparkfun EKMC4607112K PIR", (uint8_t[]){0x13, 0x12, 0x0}, (uint8_t)0x0, (uint8_t)0x0},
