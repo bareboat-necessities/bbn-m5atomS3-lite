@@ -26,5 +26,5 @@ void setup() {
 void loop() {
   uint16_t lux = sensor.getLUX();
   gen_nmea0183_xdr("$BBXDR,X,%.1f,L,ILLU", (float)lux);
-  delay(1000);
+  delay(5000);
 }
