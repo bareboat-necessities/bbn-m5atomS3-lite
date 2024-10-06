@@ -35,5 +35,5 @@ void loop() {
     gen_nmea0183_xdr("$BBXDR,C,%.2f,C,TEMP", qmp.cTemp);        // C
     gen_nmea0183_xdr("$BBXDR,P,%.2f,P,PRES", qmp.pressure);     // Pa
   }
-  delay(1000);
+  delay(5000);
 }
