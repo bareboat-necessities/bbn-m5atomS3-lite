@@ -3,6 +3,7 @@
 #include <Arduino.h>
 #include <Wire.h>
 #include <M5_DLight.h>
+#include "NmeaXDR.h"
 
 M5_DLight sensor;
 
@@ -24,6 +25,6 @@ void setup() {
 
 void loop() {
   uint16_t lux = sensor.getLUX();
-  Serial.printf("lux: %d\n", lux);
+  gen_nmea0183_xdr("$BBXDR,X,%.1f,L,ILLU", (float)lux);
   delay(1000);
 }
