@@ -284,6 +284,8 @@ void setup() {
   AtomS3.begin(cfg);
   Serial.begin(9600);
   Wire.begin();
+  Wire.setClock(100000);
+  delay(10);
   byte error, address;
   int nDevices;
   Serial.println("Scanning...");
