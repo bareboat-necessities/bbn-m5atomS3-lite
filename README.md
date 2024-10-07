@@ -10,7 +10,7 @@ The sensors stream NMEA-0183 XDR sentences via USB
 - Humidity
 - Air Pressure
 - Voltage
-- Illumination
+- Illuminance
 
 ## TODO:
 
