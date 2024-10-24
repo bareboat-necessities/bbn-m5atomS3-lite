@@ -14,16 +14,16 @@ void setup() {
   Serial.begin(4800);
   sensors.begin();
   int count = sensors.getDeviceCount();
-  gen_nmea0183_msg("$BBTXT,01,01,01,Temp sensors found=%s", String(count).c_str());
+  gen_nmea0183_msg("$BBTXT,01,01,01,TEMPERATURE sensors found=%s", String(count).c_str());
   if (count > 0) {
     for (int i = 0; i < count; i++) {
       DeviceAddress deviceAddress;
       if (!sensors.getAddress(deviceAddress, i)) {
-        gen_nmea0183_msg("$BBTXT,01,01,02,Unable to find temp sensor address for device=%s", String(i).c_str());
+        gen_nmea0183_msg("$BBTXT,01,01,02,TEMPERATURE unable to find sensor address for device=%s", String(i).c_str());
       } else {
         char str[9];
         addressToStr(deviceAddress, str);
-        gen_nmea0183_msg("$BBTXT,01,01,02,Found temp sensor address=%s", str);
+        gen_nmea0183_msg("$BBTXT,01,01,02,TEMPERATURE found sensor address=%s", str);
       }
     }
   }
