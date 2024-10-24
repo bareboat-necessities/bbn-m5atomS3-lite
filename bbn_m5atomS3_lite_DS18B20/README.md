@@ -11,6 +11,7 @@ Can be used for
 - Exhaust temperature
 - Fridge temperature
 - Engine coolant temperature
+- Batteries bank temperature
 - etc
 
 Generates NMEA 0183 XDR and TXT sentences on USB serial with 4800 baud rate
