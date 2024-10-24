@@ -1,4 +1,4 @@
-== Dallas Temperature Sensor to NMEA 0183
+= Dallas Temperature Sensor to NMEA 0183
 
 
 DS18B20 with gikfun plugin terminal board (includes required pull-up resistor for 1-wire bus)
