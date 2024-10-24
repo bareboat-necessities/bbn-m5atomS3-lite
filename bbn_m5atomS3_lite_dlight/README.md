@@ -1,4 +1,4 @@
-# M5Stack with AtomS3-Lite and M5Stack DLight illuminance sensor to NMEA-0183
+# M5Stack with AtomS3-Lite and M5Stack DLight Illuminance sensor to NMEA-0183
 
 M5Stack DLight illuminance sensor connected to M5Stack AtomS3-Lite via i2c
 
