@@ -1,5 +1,5 @@
 #ifndef Nmea0183Msg_h
-#define 
+#define Nmea0183Msg_h
 
 /*
    NMEA 0183 Messages
