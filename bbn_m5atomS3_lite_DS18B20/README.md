@@ -5,6 +5,14 @@ DS18B20 with GikFun plugin terminal board (includes required pull-up resistor fo
 
 DS18B20 data is connected to pin G8 on m5stack AtomS3-lite
 
+Can be used for 
+
+- Engine temperature
+- Exhaust temperature
+- Fridge temperature
+- Engine coolant temperature
+- etc
+
 Generates NMEA 0183 XDR and TXT sentences on USB serial with 4800 baud rate
 
 ````
