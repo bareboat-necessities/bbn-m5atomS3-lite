@@ -7,7 +7,6 @@
 #define ONE_WIRE_BUS G8          // Pin to which 1-wire bus is connected to esp32
 OneWire oneWire(ONE_WIRE_BUS);
 DallasTemperature sensors(&oneWire);
-DeviceAddress addr0;
 
 void setup() {
   auto cfg = M5.config();
@@ -18,19 +17,29 @@ void setup() {
   gen_nmea0183_msg("$BBTXT,01,01,01,Temp sensors found=%s", String(count).c_str());
   if (count > 0) {
     for (int i = 0; i < count; i++) {
-      if (!sensors.getAddress(addr0, i)) {
-        gen_nmea0183_msg("$BBTXT,01,01,02,Unable to find address for device=%s", String(i).c_str());
+      DeviceAddress deviceAddress;
+      if (!sensors.getAddress(deviceAddress, i)) {
+        gen_nmea0183_msg("$BBTXT,01,01,02,Unable to find temp sensor address for device=%s", String(i).c_str());
+      } else {
+        char str[9];
+        addressToStr(deviceAddress, str);
+        gen_nmea0183_msg("$BBTXT,01,01,02,Found temp sensor address=%s", str);
       }
     }
   }
 }
 
-void printAddress(DeviceAddress deviceAddress) {
+void byte_to_hex_ascii(unsigned char byte, char* hex_str) {
+  sprintf(hex_str, "%02X", byte);
+}
+
+void addressToStr(DeviceAddress deviceAddress, char str[9]) {
   for (uint8_t i = 0; i < 8; i++) {
-    // zero pad the address if necessary
-    if (deviceAddress[i] < 16) Serial.print("0");
-    Serial.print(deviceAddress[i], HEX);
+    char a;
+    byte_to_hex_ascii(deviceAddress[i], &a);
+    str[i] = a;
   }
+  str[8] = (char)0;
 }
 
 void loop() {
@@ -40,9 +49,9 @@ void loop() {
     for (int i = 0; i < count; i++) {
       DeviceAddress deviceAddress;
       if (sensors.getAddress(deviceAddress, i)) {
-        if (memcmp(deviceAddress, addr0, sizeof(DeviceAddress)) == 0) {
-          gen_nmea0183_msg("$BBXDR,C,%s,C,TEMP0", String(sensors.getTempCByIndex(i)).c_str());        // C
-        }
+        char str[9];
+        addressToStr(deviceAddress, str);
+        gen_nmea0183_msg("$BBXDR,C,%s", (String(sensors.getTempCByIndex(i)) + ",C,TEMP_" + String(str)).c_str());        // C
       }
     }
   }
