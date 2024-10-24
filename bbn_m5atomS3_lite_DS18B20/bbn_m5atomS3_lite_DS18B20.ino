@@ -17,8 +17,10 @@ void setup() {
   int count = sensors.getDeviceCount();
   gen_nmea0183_msg("$BBTXT,01,01,01,Temp sensors found=%s", String(count).c_str());
   if (count > 0) {
-    if (!sensors.getAddress(addr0, 0)) {
-      gen_nmea0183_msg("$BBTXT,01,01,02,Unable to find address for device=%s", String(0).c_str());
+    for (int i = 0; i < count; i++) {
+      if (!sensors.getAddress(addr0, i)) {
+        gen_nmea0183_msg("$BBTXT,01,01,02,Unable to find address for device=%s", String(i).c_str());
+      }
     }
   }
 }
