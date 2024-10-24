@@ -14,6 +14,8 @@ Can be used for
 - Batteries bank temperature
 - etc
 
+Supports multiple 1-wire Dallas Temperature sensors.
+
 Generates NMEA 0183 XDR and TXT sentences on USB serial with 4800 baud rate
 
 ````
