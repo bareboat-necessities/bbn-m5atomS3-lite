@@ -5,7 +5,7 @@ DS18B20 with GikFun plugin terminal board (includes required pull-up resistor fo
 
 DS18B20 data is connected to pin G8 on m5stack AtomS3-lite
 
-Generates NMEA 0183 XDR and TXT sentences
+Generates NMEA 0183 XDR and TXT sentences on USB servial with 4800 baud rate
 
 ````
 $BBTXT,01,01,01,TEMPERATURE sensors found=1*0A
