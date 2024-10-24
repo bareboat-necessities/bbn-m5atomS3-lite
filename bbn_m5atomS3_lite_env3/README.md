@@ -8,7 +8,7 @@ Connected to M5Stack AtomS3-Lite via i2c
 - Air Temperature
 - Humidity
 
-Generates NMEA-0183 XDR sentences like this:
+Generates NMEA-0183 XDR sentences (USB Serial with baud rate 4800) like this:
 
 ````
 $BBXDR,H,44.12,P,HUMI*62
