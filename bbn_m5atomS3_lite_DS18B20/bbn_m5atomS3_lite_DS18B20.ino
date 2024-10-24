@@ -2,10 +2,12 @@
 #include <M5Unified.h>
 #include <OneWire.h>
 #include <DallasTemperature.h>
+#include "Nmea0183Msg.h"
 
-#define ONE_WIRE_BUS G8          // Pin to which 1wire bus is connected to esp32
+#define ONE_WIRE_BUS G8          // Pin to which 1-wire bus is connected to esp32
 OneWire oneWire(ONE_WIRE_BUS);
 DallasTemperature sensors(&oneWire);
+DeviceAddress addr0;
 
 void setup() {
   auto cfg = M5.config();
@@ -13,7 +15,12 @@ void setup() {
   Serial.begin(4800);
   sensors.begin();
   int count = sensors.getDeviceCount();
-  Serial.printf("Sensors found %d\n", count);
+  gen_nmea0183_msg("$BBTXT,01,01,01,Temp sensors found=%s", String(count).c_str());
+  if (count > 0) {
+    if (!sensors.getAddress(addr0, 0)) {
+      gen_nmea0183_msg("$BBTXT,01,01,02,Unable to find address for device=%s", String(0).c_str());
+    }
+  }
 }
 
 void printAddress(DeviceAddress deviceAddress) {
@@ -29,13 +36,12 @@ void loop() {
   if (count > 0) {
     sensors.requestTemperatures();
     for (int i = 0; i < count; i++) {
-      DeviceAddress addr;
-      if (!sensors.getAddress(addr, i)) {
-        Serial.println("Unable to find address for Device");
-      } else {
-        printAddress(addr);
+      DeviceAddress deviceAddress;
+      if (sensors.getAddress(deviceAddress, i)) {
+        if (memcmp(deviceAddress, addr0, sizeof(DeviceAddress)) == 0) {
+          gen_nmea0183_msg("$BBXDR,C,%s,C,TEMP0", String(sensors.getTempCByIndex(i)).c_str());        // C
+        }
       }
-      Serial.printf(" Temp %.2f\n", sensors.getTempCByIndex(i));
     }
   }
   delay(1000);
