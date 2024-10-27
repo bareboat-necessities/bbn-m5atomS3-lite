@@ -19,7 +19,6 @@ The sensors stream NMEA-0183 XDR sentences via USB
 - Lightning detector sensor
 - UV Light intencity
 - Range (Time of Flight)
-- Current (Amp Meter)
 - RPM Meter
 - Compass
 - Boat Pitch and Roll
