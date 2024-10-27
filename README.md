@@ -11,6 +11,7 @@ The sensors stream NMEA-0183 XDR sentences via USB
 - Air Pressure
 - Voltage
 - Illuminance
+- Liquid Level
 
 ## TODO:
 
