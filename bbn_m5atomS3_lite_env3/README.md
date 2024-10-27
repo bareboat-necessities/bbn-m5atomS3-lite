@@ -55,3 +55,8 @@ $BBXDR,C,25.35,C,TEMP*6D
 $BBXDR,P,100852.69,P,PRES*75
 
 ````
+
+M5Stack ENV III Unit with Temperature Humidity Air Pressure Sensor (SHT30 + QMP6988):
+
+https://shop.m5stack.com/products/env-iii-unit-with-temperature-humidity-air-pressure-sensor-sht30-qmp6988
+
