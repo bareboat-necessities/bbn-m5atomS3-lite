@@ -6,7 +6,7 @@
 MODULE_4_20MA meter;
 
 void show_current_value(void) {
-  gen_nmea0183_xdr("$BBXDR,I,%.5f,A,AMPS", (float)(meter.getCurrentValue(0)) / 100.0);        // Amp
+  gen_nmea0183_xdr("$BBXDR,I,%.5f,A,AMPS", (float)(meter.getCurrentValue(0)) / 100.0 / 1000.0);        // Amp
 }
 
 void setup() {
