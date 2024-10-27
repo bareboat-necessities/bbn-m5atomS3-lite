@@ -16,3 +16,8 @@ $BBXDR,U,12.633,V,VOLT*57
 ````
 
 The code is set up to measure 12 V circuits. You can easily modify it for other voltage ranges.
+
+M5Stack Voltmeter unit:
+
+https://shop.m5stack.com/products/voltmeter-unit-ads1115
+
