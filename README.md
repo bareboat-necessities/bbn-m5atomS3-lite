@@ -22,6 +22,10 @@ The sensors stream NMEA-0183 XDR sentences via USB
 - RPM Meter
 - Compass
 - Boat Pitch and Roll
+- Oil Pressure
+- Oil Temperature
+- Fuel Level
+
 
 ## Project Home
 
