@@ -1,10 +1,12 @@
 #include <M5AtomS3.h>
 #include "MODULE_4_20MA.h"
+#include "NmeaXDR.h"
+#include "NmeaChecksum.h"
 
 MODULE_4_20MA meter;
 
 void show_current_value(void) {
-  Serial.printf("Current:%.2fmA\n", (float)(meter.getCurrentValue(0)) / 100.0);
+  gen_nmea0183_xdr("$BBXDR,I,%.5f,A,AMPS", (float)(meter.getCurrentValue(0)) / 100.0);        // Amp
 }
 
 void setup() {
