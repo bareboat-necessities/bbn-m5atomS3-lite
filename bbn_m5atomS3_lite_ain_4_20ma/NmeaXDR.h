@@ -67,7 +67,7 @@
   Examples:
 
   Illuminance:
-  $BBXDR,A,0.00470,A,AMPS*NN
+  $BBXDR,I,0.00470,A,AMPS*NN
 
 */
 
