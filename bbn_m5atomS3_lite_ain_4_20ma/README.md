@@ -23,3 +23,5 @@ https://shop.m5stack.com/products/ain4-20ma-unit
 Would be useful for fluid level sensors like this one:
 
 https://www.amazon.com/4-20mA-Liquid-Sensor-Throw-Sensors/dp/B07WDK2PRN
+(Two wires from that sensor connect to IN+ and IN- on M5Stack Unit and on same terminal the current loop need to be powered from some DC power source)
+
