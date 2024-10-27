@@ -14,5 +14,12 @@ $BBXDR,I,0.00480,A,AMPS*6B
 $BBXDR,I,0.00481,A,AMPS*6A
 $BBXDR,I,0.00481,A,AMPS*6A
 
-
 ````
+
+Analog to I2C Unit 4-20mA Input (STM32G030)
+
+https://shop.m5stack.com/products/ain4-20ma-unit
+
+Would be useful for fluid level sensors like this one:
+
+https://www.amazon.com/4-20mA-Liquid-Sensor-Throw-Sensors/dp/B07WDK2PRN
