@@ -32,3 +32,7 @@ $BBXDR,C,24.37,C,TEMP_2484D53B*3B
 $BBXDR,C,24.37,C,TEMP_2484D53B*3B
 $BBXDR,C,24.31,C,TEMP_2484D53B*3D
 ````
+
+Waterproof Digital Temperature Sensor DS18B20 with GikFun plugin terminal board
+
+https://www.amazon.com/Gikfun-DS18B20-Waterproof-Digital-Temperature/dp/B08V93CTM2
