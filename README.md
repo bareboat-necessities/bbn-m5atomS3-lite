@@ -6,12 +6,13 @@ The sensors stream NMEA-0183 XDR sentences via USB
 
 ## Sensors:
 
-- Temperature
-- Humidity
-- Air Pressure
-- Voltage
-- Illuminance
-- Liquid Level
+- Temperature 1-wire
+- Temperature i2c
+- Humidity i2c
+- Air Pressure i2c
+- Voltage i2c
+- Illuminance i2c
+- Liquid Level 4-20mA current
 
 ## TODO:
 
