@@ -56,18 +56,28 @@
      BB
 
   Transducer Types:
-     I - Current
+     S - Encoder
       
   Current 
-    Transducer type: I (Amp)
-    Unit of measurement: A (Amp)
+    Transducer type: S  
+    Unit of measurement: no unit (integer)
     Transducer name prefix:
-      AMPS - Amp
+      ENCODER_ADJ - Changed encoder value
+      ENCODER_SET - Confirmed encoder value
 
   Examples:
 
-  Illuminance:
-  $BBXDR,I,0.00470,A,AMPS*NN
+  Encoder:
+    $BBXDR,S,332,,ENCODER_ADJ*6B
+    $BBXDR,S,331,,ENCODER_ADJ*68
+    $BBXDR,S,302,,ENCODER_ADJ*68
+    $BBXDR,S,278,,ENCODER_ADJ*64
+    $BBXDR,S,254,,ENCODER_ADJ*6A
+    $BBXDR,S,230,,ENCODER_ADJ*68
+    $BBXDR,S,208,,ENCODER_ADJ*63
+    $BBXDR,S,188,,ENCODER_ADJ*68
+    $BBXDR,S,188,,ENCODER_SET*65
+    $BBXDR,S,188,,ENCODER_SET*65
 
 */
 
