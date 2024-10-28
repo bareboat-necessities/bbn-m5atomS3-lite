@@ -26,7 +26,6 @@ jobs:
         platform-url: https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32_index.json
         required-libraries: M5AtomS3@1.0.0,M5Unified@0.1.17,OneWire@2.3.8,DallasTemperature@3.9.0,M5-ADS1115@1.0.0,M5Unit-ENV@1.0.1,M5-Ethernet@4.0.0,M5GFX@0.1.17,SSLClient@1.6.11,UrlEncode@1.0.1
         sketch-names: "*.ino"
-        sketches-exclude: "*_encoder_unit*"
         sketch-names-find-start: bbn_*/*
         extra-arduino-cli-args: "--warnings default"
         set-build-path: true
