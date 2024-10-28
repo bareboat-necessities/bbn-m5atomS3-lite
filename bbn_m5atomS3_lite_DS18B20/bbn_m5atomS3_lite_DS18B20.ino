@@ -1,6 +1,5 @@
 #include <M5AtomS3.h>
 #include <M5Unified.h>
-#include <Arduino.h>
 #include <OneWire.h>
 #include <DallasTemperature.h>
 #include "Nmea0183Msg.h"
