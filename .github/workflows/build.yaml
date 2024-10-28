@@ -19,7 +19,7 @@ jobs:
           path: CustomLibrary_EthernetLarge # must contain string "Custom"
 
     - name: Compile sketch
-      uses: ArminJo/arduino-test-compile@v3.4.0
+      uses: ArminJo/arduino-test-compile@v3.2.1
       with:
         arduino-board-fqbn: esp32:esp32:m5stack-atoms3:CDCOnBoot=cdc
         arduino-platform: esp32:esp32@2.0.15
