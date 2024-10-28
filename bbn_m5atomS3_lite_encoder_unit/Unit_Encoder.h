@@ -11,7 +11,7 @@
 
 #include <Arduino.h>
 #include <Wire.h>
-#include "pins_arduino.h"
+#include <pins_arduino.h>
 
 #define ENCODER_ADDR 0x40
 #define ENCODER_REG  0x10
