@@ -28,7 +28,7 @@ void loop() {
     sensor.setLEDColor(0, 0x0000FF);
   }
   if (!btn_status) {
-    sensor.setLEDColor(0, 0xFF00FF);
+    sensor.setLEDColor(0, 0xFFFF00);
   }
   delay(200);
 }
