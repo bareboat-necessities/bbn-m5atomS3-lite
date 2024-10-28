@@ -10,7 +10,7 @@
 #define _UNIT_ENCODER_H_
 
 #include <Arduino.h>
-#include "Wire.h"
+#include <Wire.h>
 #include "pins_arduino.h"
 
 #define ENCODER_ADDR 0x40
