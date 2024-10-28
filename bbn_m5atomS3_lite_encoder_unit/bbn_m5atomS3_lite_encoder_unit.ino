@@ -2,6 +2,7 @@
 #include <Wire.h>
 #include "Unit_Encoder.h"
 #include "NmeaXDR.h"
+#include "NmeaChecksum.h"
 
 Unit_Encoder sensor;
 signed short int last_encoder_value = 0;
