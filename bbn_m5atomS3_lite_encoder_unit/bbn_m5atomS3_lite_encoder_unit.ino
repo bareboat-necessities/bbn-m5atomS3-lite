@@ -1,6 +1,7 @@
 #include <M5AtomS3.h>
 #include <Wire.h>
 #include "Unit_Encoder.h"
+#include "NmeaXDR.h"
 
 Unit_Encoder sensor;
 signed short int last_encoder_value = 0;
@@ -17,7 +18,7 @@ void loop() {
   signed short int encoder_value = sensor.getEncoderValue();
   bool btn_status                = sensor.getButtonStatus();
   if (last_encoder_value != encoder_value) {
-    Serial.println(encoder_value);
+    gen_nmea0183_xdr("$BBXDR,S,%.0f,,ENCODER_ADJ", (float)encoder_value);
     if (last_encoder_value < encoder_value) {
       sensor.setLEDColor(1, 0x00FF00);
     } else {
@@ -28,6 +29,7 @@ void loop() {
     sensor.setLEDColor(0, 0x0000FF);
   }
   if (!btn_status) {
+    gen_nmea0183_xdr("$BBXDR,S,%.0f,,ENCODER_SET", (float)encoder_value);
     sensor.setLEDColor(0, 0xFFFF00);
   }
   delay(200);
