@@ -9,7 +9,7 @@
 #ifndef _UNIT_ENCODER_H_
 #define _UNIT_ENCODER_H_
 
-#include "Arduino.h"
+#include <Arduino.h>
 #include "Wire.h"
 #include "pins_arduino.h"
 
