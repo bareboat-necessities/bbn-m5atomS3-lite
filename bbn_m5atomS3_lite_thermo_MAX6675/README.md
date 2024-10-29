@@ -5,7 +5,9 @@ MAX6675 thermocouple sensor
 Connected to M5Stack AtomS3-Lite via GPIO pins:
 
 SO = 5
+
 CS = 6
+
 CLK = 7
 
 Generates NMEA-0183 XDR sentences (USB Serial with baud rate 4800) like this:
