@@ -16,3 +16,4 @@ Generates NMEA-0183 XDR sentences (USB Serial with baud rate 4800) like this:
 $BBXDR,C,26.75,C,THERMOCOUPLE*6F
 ````
 
+https://www.amazon.com/HiLetgo-MAX6675-Thermocouple-Temperature-Arduino/dp/B01HT871SO
