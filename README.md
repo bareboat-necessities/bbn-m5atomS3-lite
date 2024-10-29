@@ -6,7 +6,8 @@ The sensors stream NMEA-0183 XDR sentences via USB
 
 ## Sensors:
 
-- [Temperature 1-wire](https://github.com/bareboat-necessities/bbn-m5atomS3-lite/tree/main/bbn_m5atomS3_lite_DS18B20)
+- [Dallas Temperature 1-wire](https://github.com/bareboat-necessities/bbn-m5atomS3-lite/tree/main/bbn_m5atomS3_lite_DS18B20)
+- [Thermocouple MAX6675](https://github.com/bareboat-necessities/bbn-m5atomS3-lite/tree/main/bbn_m5atomS3_lite_thermo_MAX6675)
 - [Humidity i2c](https://github.com/bareboat-necessities/bbn-m5atomS3-lite/tree/main/bbn_m5atomS3_lite_env3)
 - [Air Pressure i2c](https://github.com/bareboat-necessities/bbn-m5atomS3-lite/tree/main/bbn_m5atomS3_lite_env3)
 - [Voltage to i2c](https://github.com/bareboat-necessities/bbn-m5atomS3-lite/tree/main/bbn_m5atomS3_lite_voltmeter)
