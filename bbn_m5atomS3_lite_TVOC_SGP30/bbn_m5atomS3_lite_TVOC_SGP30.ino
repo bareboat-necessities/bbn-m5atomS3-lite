@@ -35,6 +35,7 @@ void loop() {
   // Commands the sensor to take a single eCO2/VOC measurement.
   if (!sgp.IAQmeasure()) { 
     // Measurement failed
+    delay(4);
     return;
   }
   gen_nmea0183_xdr("$BBXDR,X,%.0f,,TVOC", sgp.TVOC);        // ppb
@@ -42,6 +43,7 @@ void loop() {
 
   if (! sgp.IAQmeasureRaw()) {
     // Raw Measurement failed
+    delay(4);
     return;
   }
   gen_nmea0183_xdr("$BBXDR,X,%.0f,,rawH2", sgp.rawH2);       
