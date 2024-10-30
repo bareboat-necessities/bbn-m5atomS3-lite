@@ -60,7 +60,7 @@
       
   Total Dissolved Solids: 
     Transducer type: X (Extra)
-    Unit of measurement: S (Parts per Thousand = 1000 * ppm)
+    Unit of measurement: S (Parts per Thousand = 0.001 * ppm)
     Transducer name prefix:
       TDS - Total Dissolved Solids
 
