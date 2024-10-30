@@ -2,7 +2,7 @@
 
 https://www.cqrobot.com/index.php?route=product/product&product_id=1122
 
-M5Stack with AtomS3-Lite and Ocean TDS CQRobot (Total Dissolved Solids) Meter Sensor to NMEA-0183.
+M5Stack with AtomS3-Lite and Ocean TDS CQRobot (Total Dissolved Solids) Meter Sensor CQRSENTDS01 to NMEA-0183.
 
 Connected to GPIO pin G8 as analog input.
 
