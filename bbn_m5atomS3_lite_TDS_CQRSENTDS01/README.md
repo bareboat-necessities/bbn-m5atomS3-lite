@@ -17,6 +17,7 @@ $BBXDR,X,0.3952,S,TDS*15
 $BBXDR,X,0.3955,S,TDS*12
 ````
 
+ppm = ppt * 1000
 
 The ideal TDS level for drinking water is 300–500 ppm, while 500 ppm 
 is the maximum recommended by the EPA. Water with a TDS level above 1,000 ppm 
