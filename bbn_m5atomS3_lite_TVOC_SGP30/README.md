@@ -15,6 +15,17 @@ $BBXDR,X,13501,,rawH2*3E
 $BBXDR,X,18864,,rawEthanol*14
 ````
 
+
+Here are some TVOC levels and their associated health effects:
+
+- 0 ppb: Good
+- 220 ppb: Moderate, may cause some symptoms
+- 660 ppb: Unhealthy if sensitive, more likely to cause symptoms
+- 2200 ppb: Unhealthy
+- 3300 ppb: Very unhealthy
+- 4400 ppb: Hazardous 
+
+
 SGP30 Air Quality and TVOC sensor :
 
 [M5Stack SGP30 Air Quality and TVOC sensor](https://shop.m5stack.com/products/tvoc-eco2-gas-unit-sgp30)
