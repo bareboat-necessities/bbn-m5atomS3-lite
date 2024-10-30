@@ -19,10 +19,10 @@ void setup() {
 
 void loop() {
   float temp = 25.0; // TODO: read temperature from a real sensor
-  float tdsValue = tds.update(temp);
+  float tdsValuePPM = tds.update(temp);
 
   if (timeout < millis()) {
-    gen_nmea0183_xdr("$BBXDR,X,%.1f,S,TDS", (float)(tdsValue * 1000.0));        // Parts per Thousand
+    gen_nmea0183_xdr("$BBXDR,X,%.4f,S,TDS", (float)(tdsValuePPM * 0.001));        // Parts per Thousand
     timeout = millis() + 1000;
   }
 }
