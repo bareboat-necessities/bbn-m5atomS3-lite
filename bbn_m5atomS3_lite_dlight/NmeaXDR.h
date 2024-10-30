@@ -66,7 +66,7 @@
 
   Examples:
 
-  Illuminance (Lumens):
+  Illuminance (Lux):
   $BBXDR,X,56.0,L,ILLU*NN
 
 */
