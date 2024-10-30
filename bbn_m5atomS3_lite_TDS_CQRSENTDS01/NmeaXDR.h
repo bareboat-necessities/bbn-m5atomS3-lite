@@ -44,7 +44,7 @@
      N - Newton                                           
      P - Percent of full range | Pascal                   
      R - RPM                                              
-     S - Parts per thousand                               
+     S - Parts per Thousand (ppt)                               
      V - Volts                                            
      could be more
 */
