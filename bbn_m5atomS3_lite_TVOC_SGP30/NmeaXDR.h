@@ -69,12 +69,16 @@
 
   Examples:
 
-  Total Dissolved Solids:
+  Air Quality: 
   
-  $BBXDR,X,0.3955,S,TDS*12
-  $BBXDR,X,0.3958,S,TDS*1F
-  $BBXDR,X,0.3952,S,TDS*15
-  $BBXDR,X,0.3955,S,TDS*12
+    $BBXDR,X,5,,TVOC*2D
+    $BBXDR,X,415,,eCO2*7D
+    $BBXDR,X,13507,,rawH2*38
+    $BBXDR,X,18875,,rawEthanol*14
+    $BBXDR,X,7,,TVOC*2F
+    $BBXDR,X,416,,eCO2*7E
+    $BBXDR,X,13501,,rawH2*3E
+    $BBXDR,X,18864,,rawEthanol*14
 
 */
 
