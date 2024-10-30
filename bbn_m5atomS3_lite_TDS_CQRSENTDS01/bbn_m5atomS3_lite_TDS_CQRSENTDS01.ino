@@ -1,5 +1,6 @@
 #include <M5AtomS3.h>
 #include <Arduino.h>
+#include "NmeaXDR.h"
 #include "CQRobotTDS.h"
 
 /*
@@ -21,9 +22,7 @@ void loop() {
   float tdsValue = tds.update(temp);
 
   if (timeout < millis()) {
-    Serial.print("TDS value: ");
-    Serial.print(tdsValue, 0);
-    Serial.println(" ppm");
+    gen_nmea0183_xdr("$BBXDR,X,%.1f,S,TDS", (float)(tdsValue * 1000.0));        // Parts per Thousand
     timeout = millis() + 1000;
   }
 }
