@@ -56,17 +56,17 @@
      BB
 
   Transducer Types:
-     X - Illuminance
+     X - Extra
       
   Illuminance 
-    Transducer type: X (Lux)
+    Transducer type: X (Extra)
     Unit of measurement: L (Lux)
     Transducer name prefix:
       ILLU - Illuminance Lux
 
   Examples:
 
-  Illuminance:
+  Illuminance (Lumens):
   $BBXDR,X,56.0,L,ILLU*NN
 
 */
