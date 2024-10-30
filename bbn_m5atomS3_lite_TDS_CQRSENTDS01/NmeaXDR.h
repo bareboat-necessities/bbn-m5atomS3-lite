@@ -58,9 +58,9 @@
   Transducer Types:
      X - Extra
       
-  Current 
+  Total Dissolved Solids: 
     Transducer type: X (Extra)
-    Unit of measurement: S (Parts per thousand, 1000 * ppm)
+    Unit of measurement: S (Parts per Thousand = 1000 * ppm)
     Transducer name prefix:
       TDS - Total Dissolved Solids
 
