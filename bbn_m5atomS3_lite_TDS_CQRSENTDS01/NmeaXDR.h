@@ -67,7 +67,7 @@
   Examples:
 
   Total Dissolved Solids:
-  $BBXDR,X,26.75,S,TDS*6F
+  $BBXDR,X,438111.5,S,TDS*13
 
 */
 
