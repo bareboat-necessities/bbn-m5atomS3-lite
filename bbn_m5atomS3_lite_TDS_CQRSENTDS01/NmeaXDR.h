@@ -56,7 +56,7 @@
      BB
 
   Transducer Types:
-     X - Thermocouple
+     X - Total Dissolved Solids
       
   Current 
     Transducer type: X (Total Dissolved Solids)
