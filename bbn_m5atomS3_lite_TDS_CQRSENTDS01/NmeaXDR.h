@@ -56,10 +56,10 @@
      BB
 
   Transducer Types:
-     X - Total Dissolved Solids
+     X - Extra
       
   Current 
-    Transducer type: X (Total Dissolved Solids)
+    Transducer type: X (Extra)
     Unit of measurement: S (Parts per thousand, 1000 * ppm)
     Transducer name prefix:
       TDS - Total Dissolved Solids
