@@ -12,8 +12,10 @@ Connected to M5Stack AtomS3-Lite via i2c
 Generates NMEA-0183 XDR sentences (USB Serial with baud rate 4800) like this:
 
 ````
-
-
+$BBXDR,C,25.97,C,TEMP_BME680*4E
+$BBXDR,P,102061.00,P,PRES_BME680*5B
+$BBXDR,H,48.09,P,HUMI_BME680*4F
+$BBXDR,H,32.17,,GASR_BME680*03
 ````
 
 Bosch BME680 with Temperature Humidity Air Pressure Sensor:
