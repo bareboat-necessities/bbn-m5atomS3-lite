@@ -20,5 +20,5 @@ $BBXDR,H,32.17,,GASR_BME680*03
 
 Bosch BME680 with Temperature Humidity Air Pressure Sensor:
 
-[BME680](https://www.adafruit.com/product/3660)
+[Adafruit BME680](https://www.adafruit.com/product/3660)
 
