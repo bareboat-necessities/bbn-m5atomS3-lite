@@ -16,7 +16,7 @@ The sensors stream NMEA-0183 XDR sentences via USB
 - [Illuminance i2c BH1750FVI-TR](https://github.com/bareboat-necessities/bbn-m5atomS3-lite/tree/main/bbn_m5atomS3_lite_dlight)
 - [4-20mA current (Ex: Tank Liquid Level) to i2c](https://github.com/bareboat-necessities/bbn-m5atomS3-lite/tree/main/bbn_m5atomS3_lite_ain_4_20ma)
 - [Ocean TDS (Total Dissolved Solids) Water Quality Meter CQRSENTDS01](https://github.com/bareboat-necessities/bbn-m5atomS3-lite/tree/main/bbn_m5atomS3_lite_TDS_CQRSENTDS01)
-- [Encoder](https://github.com/bareboat-necessities/bbn-m5atomS3-lite/tree/main/bbn_m5atomS3_lite_encoder_unit)
+- [Encoder with STM32F030](https://github.com/bareboat-necessities/bbn-m5atomS3-lite/tree/main/bbn_m5atomS3_lite_encoder_unit)
 
 ## TODO:
 
