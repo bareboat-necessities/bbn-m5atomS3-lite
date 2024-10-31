@@ -27,7 +27,7 @@ The sensors stream NMEA-0183 XDR sentences via USB
 - Compass
 - Boat Pitch and Roll
 - Oil Pressure
-- Oil Temperature
+- Bilge Sensors
 - Fuel Level
 
 
