@@ -55,11 +55,12 @@
   NMEA-0183 Sender 
     BB
 
-  Temperature, pressure, humidity
+  Temperature, pressure, humidity, gas resistance
 
-  $BBXDR,C,28.07,C,TEMP*61
-  $BBXDR,P,101328.38,P,PRES*76
-  $BBXDR,H,44.57,P,HUMI*63
+    $BBXDR,C,25.97,C,TEMP_BME680*4E
+    $BBXDR,P,102061.00,P,PRES_BME680*5B
+    $BBXDR,H,48.09,P,HUMI_BME680*4F
+    $BBXDR,H,32.17,,GASR_BME680*03
 
 */
 
