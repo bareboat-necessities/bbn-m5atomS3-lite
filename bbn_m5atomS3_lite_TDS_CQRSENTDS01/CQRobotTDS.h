@@ -52,13 +52,22 @@ float CQRobotTDS::update(float temp) {
   return update();
 }
 
+// readVoltage is used to improve the linearity of the ESP32 ADC 
+// see: https://github.com/G6EJD/ESP32-ADC-Accuracy-Improvement-function
+double readVoltage(byte pin) {
+  double reading = analogRead(pin); // Reference voltage is 3v3 so maximum reading is 3v3 = 4095 in range 0 to 4095
+  if (reading < 1 || reading > 4095) return 0;
+  // return -0.000000000009824 * pow(reading,3) + 0.000000016557283 * pow(reading,2) + 0.000854596860691 * reading + 0.065440348345433;
+  return (-0.000000000000016 * pow(reading, 4) + 0.000000000118171 * pow(reading, 3) - 0.000000301211691 * pow(reading, 2) + 0.001109019271794 * reading + 0.034143524634089) * 1000;
+} // Added an improved polynomial, use either, comment out as required
+
 float CQRobotTDS::update() {
   // read and calculate
   static unsigned long analogSampleTimepoint = millis();
   if (millis() - analogSampleTimepoint > 40U) {
     // every 40 milliseconds, read the analog value from the ADC
     analogSampleTimepoint = millis();
-    this->analogBuffer[this->analogBufferIndex] = analogRead(this->pin);    // read the analog value and store into the buffer
+    this->analogBuffer[this->analogBufferIndex] = readVoltage(this->pin);    // read the analog value and store into the buffer
     this->analogBufferIndex++;
     if (this->analogBufferIndex == CQROBOT_SCOUNT) {
       this->analogBufferIndex = 0;
