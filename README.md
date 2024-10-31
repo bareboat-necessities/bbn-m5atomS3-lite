@@ -11,6 +11,7 @@ The sensors stream NMEA-0183 XDR sentences via USB
 - [Air Quality](https://github.com/bareboat-necessities/bbn-m5atomS3-lite/tree/main/bbn_m5atomS3_lite_TVOC_SGP30)
 - [Humidity i2c](https://github.com/bareboat-necessities/bbn-m5atomS3-lite/tree/main/bbn_m5atomS3_lite_env3)  and [with BME680](https://github.com/bareboat-necessities/bbn-m5atomS3-lite/tree/main/bbn_m5atomS3_lite_WOX_BME680)
 - [Air Pressure i2c](https://github.com/bareboat-necessities/bbn-m5atomS3-lite/tree/main/bbn_m5atomS3_lite_env3) and [with BME680](https://github.com/bareboat-necessities/bbn-m5atomS3-lite/tree/main/bbn_m5atomS3_lite_WOX_BME680)
+- [Air Temperature i2c](https://github.com/bareboat-necessities/bbn-m5atomS3-lite/tree/main/bbn_m5atomS3_lite_env3) and [with BME680](https://github.com/bareboat-necessities/bbn-m5atomS3-lite/tree/main/bbn_m5atomS3_lite_WOX_BME680)
 - [Voltage to i2c](https://github.com/bareboat-necessities/bbn-m5atomS3-lite/tree/main/bbn_m5atomS3_lite_voltmeter)
 - [Illuminance i2c](https://github.com/bareboat-necessities/bbn-m5atomS3-lite/tree/main/bbn_m5atomS3_lite_dlight)
 - [4-20mA current (Ex: Tank Liquid Level) to i2c](https://github.com/bareboat-necessities/bbn-m5atomS3-lite/tree/main/bbn_m5atomS3_lite_ain_4_20ma)
