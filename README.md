@@ -29,6 +29,7 @@ The sensors stream NMEA-0183 XDR sentences via USB
 - Oil Pressure
 - Bilge Sensors
 - Fuel Level
+- Anchor Chain Counter
 
 
 ## Project Home
