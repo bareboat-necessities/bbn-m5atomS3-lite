@@ -1,6 +1,11 @@
 #include <M5AtomS3.h>
 #include "NmeaXDR.h"
 
+/*
+ * https://shop.m5stack.com/products/pir-module
+ * 
+ * PIR Motion Sensor (AS312) to NMEA 0183 XDR
+ */
 #define PIR_MOTION_PIN G7
 
 void setup() {
