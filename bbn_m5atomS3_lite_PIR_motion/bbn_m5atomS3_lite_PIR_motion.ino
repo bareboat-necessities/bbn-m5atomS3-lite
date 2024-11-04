@@ -16,9 +16,9 @@ void setup() {
 }
 
 void loop() {
-  bool sensed = digitalRead(PIR_MOTION_PIN) > 0;
+  bool sensed = digitalRead(PIR_MOTION_PIN) == 1;
   if (sensed) {
-    gen_nmea0183_xdr("$BBXDR,S,1,,PIR_MOTION", 0);
+    gen_nmea0183_xdr("$BBXDR,S,1,,PIR_MOTION", 1);
   }
   delay(500);
 }
