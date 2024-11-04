@@ -1,6 +1,6 @@
 # M5Stack with AtomS3-Lite and M5Stack Limit Switch to NMEA-0183
 
-M5Stack Limit Switch connected to M5Stack AtomS3-Lite via GPIO digital pin
+M5Stack Limit Switch connected to M5Stack AtomS3-Lite via GPIO digital pin (see .ino code code pin number)
 
 Generates NMEA-0183 XDR sentences (USB Serial with baud rate 4800) like this:
 
