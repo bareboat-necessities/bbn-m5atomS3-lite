@@ -1,6 +1,6 @@
 # M5Stack with AtomS3-Lite and M5Stack Encoder Unit to NMEA-0183
 
-M5Stack M5Stack Encoder Unit connected to M5Stack AtomS3-Lite via i2c
+M5Stack Encoder Unit connected to M5Stack AtomS3-Lite via i2c
 
 Generates NMEA-0183 XDR sentences (USB Serial with baud rate 4800) like this:
 
