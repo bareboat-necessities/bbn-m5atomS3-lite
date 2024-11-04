@@ -13,6 +13,7 @@ void setup() {
   AtomS3.begin(cfg);
   Serial.begin(4800);
   pinMode(PIR_MOTION_PIN, INPUT);
+  digitalRead(PIR_MOTION_PIN);
 }
 
 void loop() {
