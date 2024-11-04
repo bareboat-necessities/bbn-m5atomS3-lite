@@ -24,17 +24,17 @@ void loop() {
   if (reached != limit_switch.reached) {
     limit_switch.reached = reached;
     if (reached) {
-      gen_nmea0183_xdr("$BBXDR,S,1,,LIMIT_NEW");
+      gen_nmea0183_xdr("$BBXDR,S,1,,LIMIT_NEW", 1);
     } else {
-      gen_nmea0183_xdr("$BBXDR,S,0,,LIMIT_NEW");
+      gen_nmea0183_xdr("$BBXDR,S,0,,LIMIT_NEW", 0);
     }
     limit_switch.last_limit_reported = millis();
   }
   if (millis() - limit_switch.last_limit_reported > 5000) {
     if (limit_switch.reached) {
-      gen_nmea0183_xdr("$BBXDR,S,1,,LIMIT_CUR");
+      gen_nmea0183_xdr("$BBXDR,S,1,,LIMIT_CUR", 1);
     } else {
-      gen_nmea0183_xdr("$BBXDR,S,0,,LIMIT_CUR");
+      gen_nmea0183_xdr("$BBXDR,S,0,,LIMIT_CUR", 0);
     }
     limit_switch.last_limit_reported = millis();
   }
