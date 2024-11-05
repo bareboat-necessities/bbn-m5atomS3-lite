@@ -21,6 +21,10 @@ The sensors stream NMEA-0183 XDR sentences via USB
 - [M5Stack PIR Motion Sensor (AS312)](https://github.com/bareboat-necessities/bbn-m5atomS3-lite/tree/main/bbn_m5atomS3_lite_PIR_motion)
 - [M5Stack GPS with AT6558](https://github.com/bareboat-necessities/bbn-m5atomS3-lite/tree/main/bbn_m5atomS3_lite_GPS_AT6558)
 
+## Integration with SignalK
+
+Integration with SignalK is done via NMEA XDR Parser SignalK plugin https://github.com/GaryWSmith/xdr-parser-plugin
+
 ## More BBN devices
 
 - [M5Stack Tough (ESP-32) Sailing Instruments Color Touch Waterproof Display and Autopilot Control](https://github.com/bareboat-necessities/bbn-m5stack-tough)
