@@ -10,6 +10,10 @@
    NMEA Extensions:
 
    https://www.eevblog.com/forum/metrology/fake-gnss-modules-and-timekeeping/?action=dlattach;attach=944088
+
+   GnssToolkit3
+   https://cbgps.com/p7/app/gnsstoolkit/index_en.htm
+   https://github.com/zxcwhale/GnssToolKit3-binaries/
    
 */
 
