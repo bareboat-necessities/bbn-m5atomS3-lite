@@ -21,7 +21,12 @@ The sensors stream NMEA-0183 XDR sentences via USB
 - [M5Stack PIR Motion Sensor (AS312)](https://github.com/bareboat-necessities/bbn-m5atomS3-lite/tree/main/bbn_m5atomS3_lite_PIR_motion)
 - [M5Stack GPS with AT6558](https://github.com/bareboat-necessities/bbn-m5atomS3-lite/tree/main/bbn_m5atomS3_lite_GPS_AT6558)
 
+## More BBN devices
 
+- [M5Stack Tough (ESP-32) Sailing Instruments Color Touch Waterproof Display and Autopilot Control](https://github.com/bareboat-necessities/bbn-m5stack-tough)
+- [BBN OS on M5Stack CoreMP135 with NMEA 2000/0183, SignalK and more](https://github.com/bareboat-necessities/lysmarine_gen/tree/coremp135_bookworm)
+- [BBN Boat Heave Sensor using IMU on M5Stack AtomS3](https://github.com/bareboat-necessities/bbn-wave-period-esp32)
+- [DIY N2K to USB gateway in Actisense format on M5Atom-Lite](https://github.com/bareboat-necessities/bbn-nmea200-m5atom/tree/main/bbn-nmea2000-usb-gw-m5atom)
 
 ## TODO:
 
