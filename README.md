@@ -19,6 +19,9 @@ The sensors stream NMEA-0183 XDR sentences via USB
 - [Encoder with STM32F030](https://github.com/bareboat-necessities/bbn-m5atomS3-lite/tree/main/bbn_m5atomS3_lite_encoder_unit)
 - [M5Stack Limit Switch](https://github.com/bareboat-necessities/bbn-m5atomS3-lite/tree/main/bbn_m5atomS3_lite_limit_switch)
 - [M5Stack PIR Motion Sensor (AS312)](https://github.com/bareboat-necessities/bbn-m5atomS3-lite/tree/main/bbn_m5atomS3_lite_PIR_motion)
+- [M5Stack GPS with AT6558](https://github.com/bareboat-necessities/bbn-m5atomS3-lite/tree/main/bbn_m5atomS3_lite_GPS_AT6558)
+
+
 
 ## TODO:
 
