@@ -27,13 +27,14 @@ void setup() {
 }
 
 void loop() {
-  if (Serial.available()) {
-    int ch = Serial.read();
+  while (Serial.available() > 0) {
+    char ch = Serial.read();
     Serial2.write(ch);
   }
-  if (Serial2.available()) {
-    int ch = Serial2.read(); 
+  while (Serial2.available() > 0) {
+    char ch = Serial2.read(); 
     Serial.write(ch);
   }
+  delay(10);
 }
 
