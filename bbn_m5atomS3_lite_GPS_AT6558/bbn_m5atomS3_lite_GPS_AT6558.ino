@@ -23,6 +23,7 @@ void setup() {
   Serial.begin(9600);
   Serial2.begin(9600, SERIAL_8N1, G5, G6);  // Port C pins
   Serial2.print("$PCAS01,1*1D\r\n");        // Set baud mode to 9600
+  Serial2.print("$PCAS11,4*19\r\n");        // Set "sea" mode
 }
 
 void loop() {
