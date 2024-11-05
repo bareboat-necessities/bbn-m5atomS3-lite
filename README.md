@@ -26,7 +26,8 @@ The sensors stream NMEA-0183 XDR sentences via USB
 - [M5Stack Tough (ESP-32) Sailing Instruments Color Touch Waterproof Display and Autopilot Control](https://github.com/bareboat-necessities/bbn-m5stack-tough)
 - [BBN OS on M5Stack CoreMP135 with NMEA 2000/0183, SignalK and more](https://github.com/bareboat-necessities/lysmarine_gen/tree/coremp135_bookworm)
 - [BBN Boat Heave Sensor using IMU on M5Stack AtomS3](https://github.com/bareboat-necessities/bbn-wave-period-esp32)
-- [DIY N2K to USB gateway in Actisense format on M5Atom-Lite](https://github.com/bareboat-necessities/bbn-nmea200-m5atom/tree/main/bbn-nmea2000-usb-gw-m5atom)
+- [DIY NMEA 2000 to USB gateway in Actisense format on M5Atom-Lite](https://github.com/bareboat-necessities/bbn-nmea200-m5atom/tree/main/bbn-nmea2000-usb-gw-m5atom)
+- [NMEA 2000 environmental sensors on M5Atom-Lite](https://github.com/bareboat-necessities/bbn-nmea200-m5atom/tree/main/bbn-nmea2000-env-m5atom)
 
 ## TODO:
 
