@@ -23,7 +23,7 @@ The sensors stream NMEA-0183 XDR sentences via USB
 
 ## Integration with SignalK
 
-Integration with SignalK is done via NMEA XDR Parser SignalK plugin https://github.com/GaryWSmith/xdr-parser-plugin
+Integration with SignalK is done via NMEA XDR Parser SignalK plugin. More: https://github.com/GaryWSmith/xdr-parser-plugin
 
 ## More BBN devices
 
