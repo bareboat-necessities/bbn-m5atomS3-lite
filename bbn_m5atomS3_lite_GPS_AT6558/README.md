@@ -1,6 +1,6 @@
-= M5Stack GPS Unit GPS_AT6558 plugged into port C of ATOMIC PortABC Extension Base with M5Stack AtomS3-lite on it.
+# M5Stack GPS Unit GPS_AT6558 plugged into port C of ATOMIC PortABC Extension Base with M5Stack AtomS3-lite on it.
 
-== Generates NMEA 0183 GPS Sentences with baud rate of 9600 on USB port
+## Generates NMEA 0183 GPS Sentences with baud rate of 9600 on USB port
 
 https://docs.m5stack.com/en/unit/gps
 
