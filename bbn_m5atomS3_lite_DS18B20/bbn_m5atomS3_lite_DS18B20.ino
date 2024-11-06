@@ -32,7 +32,7 @@ void byte_to_hex_ascii(unsigned char byte, char* hex_str) {
   sprintf(hex_str, "%02X", byte);
 }
 
-void addressToStr(DeviceAddress deviceAddress, char str[9]) {
+void addressToStr(DeviceAddress deviceAddress, char str[17]) {
   for (uint8_t i = 0; i < 8; i++) {
     char a[3];
     byte_to_hex_ascii(deviceAddress[i], &a);
