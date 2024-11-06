@@ -28,14 +28,14 @@ void setup() {
   }
 }
 
-void byte_to_hex_ascii(unsigned char byte, char* hex_str) {
+void byte_to_hex_ascii(unsigned char byte, char hex_str[3]) {
   sprintf(hex_str, "%02X", byte);
 }
 
 void addressToStr(DeviceAddress deviceAddress, char str[17]) {
   for (uint8_t i = 0; i < 8; i++) {
     char a[3];
-    byte_to_hex_ascii(deviceAddress[i], &a);
+    byte_to_hex_ascii(deviceAddress[i], a);
     str[2 * i] = a[0];
     str[2 * i + 1] = a[1];
   }
