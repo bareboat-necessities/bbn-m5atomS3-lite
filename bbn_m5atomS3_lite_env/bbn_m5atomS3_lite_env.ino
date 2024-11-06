@@ -28,11 +28,11 @@ void setup() {
   }
 
   /* Default settings from datasheet. */
-  bmp.setSampling(BMP280::MODE_NORMAL,     /* Operating Mode. */
-                  BMP280::SAMPLING_X2,     /* Temp. oversampling */
-                  BMP280::SAMPLING_X16,    /* Pressure oversampling */
-                  BMP280::FILTER_X16,      /* Filtering. */
-                  BMP280::STANDBY_MS_500); /* Standby time. */
+  bmp280.setSampling(BMP280::MODE_NORMAL,     /* Operating Mode. */
+                     BMP280::SAMPLING_X2,     /* Temp. oversampling */
+                     BMP280::SAMPLING_X16,    /* Pressure oversampling */
+                     BMP280::FILTER_X16,      /* Filtering. */
+                     BMP280::STANDBY_MS_500); /* Standby time. */
 }
 
 void loop() {
