@@ -16,7 +16,6 @@ void setup() {
   if (!dht.begin(&Wire, DHT12_I2C_ADDR, G2, G1, 100000U)) {
     gen_nmea0183_msg("$BBTXT,01,01,01,Sensor not found type=%s", "DHT12");
   }
-
   if (!bmp.begin(&Wire, BMP280_I2C_ADDR, G2, G1, 100000U)) {
     gen_nmea0183_msg("$BBTXT,01,01,01,Sensor not found type=%s", "BMP280");
   }
@@ -34,7 +33,6 @@ void loop() {
     gen_nmea0183_xdr("$BBXDR,H,%.2f,P,HUMI_DHT12", dht.humidity);   // %
     gen_nmea0183_xdr("$BBXDR,C,%.2f,C,TEMP_DHT12", dht.cTemp);      // C
   }
-
   if (bmp.update()) {
     gen_nmea0183_xdr("$BBXDR,C,%.2f,C,TEMP_BMP280", bmp.cTemp);        // C
     gen_nmea0183_xdr("$BBXDR,P,%.2f,P,PRES_BMP280", bmp.pressure);     // Pa
