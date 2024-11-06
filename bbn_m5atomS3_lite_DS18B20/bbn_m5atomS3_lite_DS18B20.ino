@@ -39,7 +39,7 @@ void addressToStr(DeviceAddress deviceAddress, char str[17]) {
     str[2 * i] = a[0];
     str[2 * i + 1] = a[1];
   }
-  str[17] = (char)0;
+  str[16] = (char)0;
 }
 
 void loop() {
