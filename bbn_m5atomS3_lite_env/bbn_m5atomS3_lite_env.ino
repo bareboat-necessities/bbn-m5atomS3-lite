@@ -3,6 +3,7 @@
 #include <M5UnitENV.h>
 #include <Wire.h>
 #include "NmeaXDR.h"
+#include "Nmea0183Msg.h"
 
 DHT12 dht12;
 BMP280 bmp280;
