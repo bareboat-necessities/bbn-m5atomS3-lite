@@ -1,11 +1,11 @@
 #include <M5AtomS3.h>
-#include <Arduino.h>
 #include <M5UnitENV.h>
 #include <Wire.h>
 #include "NmeaXDR.h"
+#include "Nmea0183Msg.h"
 
-DHT12 dht;
-BMP280 bmp;
+SHT3X sht3x;
+QMP6988 qmp6988;
 
 void setup() {
   auto cfg = M5.config();
@@ -13,29 +13,28 @@ void setup() {
   Wire.begin();
   Serial.begin(4800);
 
-  if (!dht.begin(&Wire, DHT12_I2C_ADDR, G2, G1, 100000U)) {
-    gen_nmea0183_msg("$BBTXT,01,01,01,Sensor not found type=%s", "DHT12");
+  int i = 0;
+  while (!qmp6988.begin(&Wire, QMP6988_SLAVE_ADDRESS_L, G2, G1, 100000U) && i < 3) {
+    gen_nmea0183_msg("$BBTXT,01,01,01,Sensor not found type=%s", "QMP6988");
+    delay(4);
+    i++;
   }
-  if (!bmp.begin(&Wire, BMP280_I2C_ADDR, G2, G1, 100000U)) {
-    gen_nmea0183_msg("$BBTXT,01,01,01,Sensor not found type=%s", "BMP280");
+  i = 0;
+  while (!sht3x.begin(&Wire, SHT3X_I2C_ADDR, G2, G1, 100000U) && i < 3) {
+    gen_nmea0183_msg("$BBTXT,01,01,01,Sensor not found type=%s", "SHT3X");
+    delay(4);
+    i++;
   }
-
-  /* Default settings from datasheet. */
-  bmp.setSampling(BMP280::MODE_NORMAL,     /* Operating Mode. */
-                  BMP280::SAMPLING_X2,     /* Temp. oversampling */
-                  BMP280::SAMPLING_X16,    /* Pressure oversampling */
-                  BMP280::FILTER_X16,      /* Filtering. */
-                  BMP280::STANDBY_MS_500); /* Standby time. */
 }
 
 void loop() {
-  if (dht.update()) {
-    gen_nmea0183_xdr("$BBXDR,H,%.2f,P,HUMI_DHT12", dht.humidity);   // %
-    gen_nmea0183_xdr("$BBXDR,C,%.2f,C,TEMP_DHT12", dht.cTemp);      // C
+  if (sht3x.update()) {
+    gen_nmea0183_xdr("$BBXDR,H,%.2f,P,HUMI_SHT3X", sht3x.humidity);   // %
+    gen_nmea0183_xdr("$BBXDR,C,%.2f,C,TEMP_SHT3X", sht3x.cTemp);      // C
   }
-  if (bmp.update()) {
-    gen_nmea0183_xdr("$BBXDR,C,%.2f,C,TEMP_BMP280", bmp.cTemp);        // C
-    gen_nmea0183_xdr("$BBXDR,P,%.2f,P,PRES_BMP280", bmp.pressure);     // Pa
+  if (qmp6988.update()) {
+    gen_nmea0183_xdr("$BBXDR,C,%.2f,C,TEMP_QMP6988", qmp6988.cTemp);        // C
+    gen_nmea0183_xdr("$BBXDR,P,%.2f,P,PRES_QMP6988", qmp6988.pressure);     // Pa
   }
   delay(1000);
 }
