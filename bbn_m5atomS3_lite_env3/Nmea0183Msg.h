@@ -1,4 +1,3 @@
-
 #ifndef Nmea0183Msg_h
 #define Nmea0183Msg_h
 
