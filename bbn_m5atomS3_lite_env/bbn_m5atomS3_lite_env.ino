@@ -14,13 +14,11 @@ void setup() {
   Serial.begin(4800);
 
   if (!dht.begin(&Wire, DHT12_I2C_ADDR, G2, G1, 100000U)) {
-    Serial.println("Couldn't find DHT12");
-    while (1) delay(1);
+    gen_nmea0183_msg("$BBTXT,01,01,01,Sensor not found type=%s", "DHT12");
   }
 
   if (!bmp.begin(&Wire, BMP280_I2C_ADDR, G2, G1, 100000U)) {
-    Serial.println("Couldn't find BMP280");
-    while (1) delay(1);
+    gen_nmea0183_msg("$BBTXT,01,01,01,Sensor not found type=%s", "BMP280");
   }
 
   /* Default settings from datasheet. */
