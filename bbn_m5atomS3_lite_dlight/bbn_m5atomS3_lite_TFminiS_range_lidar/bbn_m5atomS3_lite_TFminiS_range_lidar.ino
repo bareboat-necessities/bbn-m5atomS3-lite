@@ -17,8 +17,6 @@
 //#define RXD2 G16  // Green on the Lidar
 //#define TXD2 G17  // White on the Lidar
 
-
-int i;
 unsigned char check;
 int dist;                    // actual distance measurements of LiDAR
 unsigned char uart[9];       // save data measured by LiDAR
@@ -88,7 +86,6 @@ void Get_Lidar_data() {
       if (uart[8] == check) {
         dist = uart[2] + uart[3] * 256;       // the distance in cm
         int percent = 0;
-
         if (dist <= 200) {                    // dist in cm, so 200 cm = 2 meters
           percent = (200 - dist) * 100 / 200; // calculate percentage
         }
