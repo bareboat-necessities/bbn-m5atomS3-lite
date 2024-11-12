@@ -5,6 +5,8 @@
 
 Adafruit_VL53L0X VL53L0X = Adafruit_VL53L0X();
 
+const char* VL53L0X_NAME = "VL53L0X";
+
 void setup() {
   auto cfg = M5.config();
   AtomS3.begin(cfg);
@@ -12,7 +14,7 @@ void setup() {
   Serial.begin(4800);
 
   if (!VL53L0X.begin(VL53L0X_I2C_ADDR, false, &Wire)) {
-    gen_nmea0183_msg("$BBTXT,01,01,01,RANGE sensors not found=%s", "VL53L0X");
+    gen_nmea0183_msg("$BBTXT,01,01,01,RANGE sensors not found=%s", VL53L0X_NAME);
   }
 }
 
@@ -24,5 +26,5 @@ void loop() {
   } else {
     // out of range
   }
-  delay(100);
+  delay(200);
 }
