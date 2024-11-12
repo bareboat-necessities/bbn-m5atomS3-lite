@@ -12,7 +12,7 @@ void setup() {
   Serial.begin(4800);
 
   if (!VL53L0X.begin(VL53L0X_I2C_ADDR, false, &Wire)) {
-    gen_nmea0183_msg("$BBTXT,01,01,01,RANGE sensors not found=%s", F("VL53L0X"));
+    gen_nmea0183_msg("$BBTXT,01,01,01,RANGE sensors not found=%s", "VL53L0X");
   }
 }
 
