@@ -3,6 +3,10 @@
 
 /*
   Benewake TFmini-S UART LiDAR to NMEA-0183 XDR
+
+  TODO: Might be better to switch to:
+  https://github.com/dhrubasaha08/TFminiS
+    
 */
 
 // UART pins when Lidar is plugged into port C of ATOMIC PortABC Extension Base
