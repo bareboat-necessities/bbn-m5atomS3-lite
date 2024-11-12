@@ -58,9 +58,11 @@
   Transducer Types:
      D - Distance
       
-  Range ToF (Time of Flight): 
-  
-   $BBXDR,D,0.4610,M,RANGE_VL53L0X*xx
+  $BBXDR,D,0.2930,M,RANGE_VL53L0X*69
+  $BBXDR,D,0.3930,M,RANGE_VL53L0X*68
+  $BBXDR,D,0.2410,M,RANGE_VL53L0X*66
+  $BBXDR,D,0.2430,M,RANGE_VL53L0X*64
+  $BBXDR,D,0.2650,M,RANGE_VL53L0X*60
 
 */
 
