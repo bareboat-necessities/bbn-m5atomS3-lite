@@ -5,8 +5,6 @@
 // 0x03 is default i2c address, but the address can also be 0x02, 0x01.
 // Adjust the address jumpers on the underside of the product.
 #define AS3935_ADDR 0x03
-#define INDOOR 0x12
-#define OUTDOOR 0xE
 #define LIGHTNING_INT 0x08
 #define DISTURBER_INT 0x04
 #define NOISE_INT 0x01
@@ -16,34 +14,30 @@ SparkFun_AS3935 lightning(AS3935_ADDR);
 // Interrupt pin for lightning detection
 const int lightningInt = G7;
 
-// This variable holds the number representing the lightning or non-lightning
-// event issued by the lightning detector.
-int intVal = 0;
-int noise = 2; // Value between 1-7
-int disturber = 2; // Value between 1-10
+byte noiseFloor = 2;
+byte watchDogVal = 2;
+byte spike = 2;
+byte lightningThresh = 1;
 
 void setup() {
   auto cfg = M5.config();
   AtomS3.begin(cfg);
   Serial.begin(4800);
 
-  // When lightning is detected the interrupt pin goes HIGH.
-  pinMode(lightningInt, INPUT);
-
-  Serial.println("AS3935 Franklin Lightning Detector");
+  pinMode(lightningInt, INPUT); // When lightning is detected the interrupt pin goes HIGH.
 
   Wire.begin(); // Begin Wire before lightning sensor.
 
-  if ( !lightning.begin() ) { // Initialize the sensor.
-    Serial.println ("Lightning Detector did not start up, freezing!");
+  if ( !lightning.begin(Wire) ) { // Initialize the sensor.
+    Serial.println("Lightning Detector did not start up, freezing!");
     while (1);
   }
-  else {
-    Serial.println("Schmow-ZoW, Lightning Detector Ready!");
-  }
-  
-  // The lightning detector defaults to an indoor setting at
-  // the cost of less sensitivity
+
+  lightning.maskDisturber(true);
+  lightning.setNoiseLevel(noiseFloor);
+  lightning.watchdogThreshold(watchDogVal);
+  lightning.spikeRejection(spike);
+  lightning.lightningThreshold(lightningThresh);
   lightning.setIndoorOutdoor(INDOOR);
   //lightning.setIndoorOutdoor(OUTDOOR);
 }
@@ -52,14 +46,14 @@ void loop() {
   if (digitalRead(lightningInt) == HIGH) {
     // Hardware has alerted us to an event, now we read the interrupt register
     // to see exactly what it is.
-    intVal = lightning.readInterruptReg();
+    uint8_t intVal = lightning.readInterruptReg();
     if (intVal == NOISE_INT) {
-      Serial.println("Noise.");
+      // Noise
       // Too much noise? Uncomment the code below, a higher number means better noise rejection.
       //lightning.setNoiseLevel(setNoiseLevel);
     }
     else if (intVal == DISTURBER_INT) {
-      Serial.println("Disturber.");
+      // Disturber
       // Too many disturbers? Uncomment the code below, a higher number means better disturber rejection.
       //lightning.watchdogThreshold(threshVal);
     }
@@ -71,7 +65,11 @@ void loop() {
       Serial.print("Approximately: ");
       Serial.print(distance);
       Serial.println("km away!");
+
+      long lightning_energy = lightning.lightningEnergy();
+      Serial.print("Lightning Energy: ");
+      Serial.println(lightning_energy);
     }
   }
-  delay(100); 
+  delay(100);
 }
