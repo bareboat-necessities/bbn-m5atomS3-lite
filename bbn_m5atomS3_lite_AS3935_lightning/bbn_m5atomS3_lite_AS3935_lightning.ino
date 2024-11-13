@@ -26,10 +26,9 @@ void setup() {
 
   pinMode(lightningInt, INPUT); // When lightning is detected the interrupt pin goes HIGH.
 
-  Wire.begin(); // Begin Wire before lightning sensor.
-
-  if ( !lightning.begin(Wire) ) { // Initialize the sensor.
-    Serial.println("Lightning Detector did not start up, freezing!");
+  Wire.begin(); 
+  if ( !lightning.begin(Wire) ) {
+    Serial.println("Lightning Detector did not start!");
     while (1);
   }
 
@@ -49,13 +48,9 @@ void loop() {
     uint8_t intVal = lightning.readInterruptReg();
     if (intVal == NOISE_INT) {
       // Noise
-      // Too much noise? Uncomment the code below, a higher number means better noise rejection.
-      //lightning.setNoiseLevel(setNoiseLevel);
     }
     else if (intVal == DISTURBER_INT) {
       // Disturber
-      // Too many disturbers? Uncomment the code below, a higher number means better disturber rejection.
-      //lightning.watchdogThreshold(threshVal);
     }
     else if (intVal == LIGHTNING_INT) {
       Serial.println("Lightning Strike Detected!");
@@ -65,7 +60,6 @@ void loop() {
       Serial.print("Approximately: ");
       Serial.print(distance);
       Serial.println("km away!");
-
       long lightning_energy = lightning.lightningEnergy();
       Serial.print("Lightning Energy: ");
       Serial.println(lightning_energy);
