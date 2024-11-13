@@ -1,6 +1,8 @@
 # M5Stack with AtomS3-Lite and M5Stack Angle Unit to NMEA-0183
 
-M5Stack Angle Unit connected to M5Stack AtomS3-Lite via gpio analog pin
+M5Stack Angle Unit connected to M5Stack AtomS3-Lite via gpio analog pin.
+
+This sensor can be used for user input of angular offsets such as offset for wind direction sensor, offset for IMU mount angle, etc
 
 Generates NMEA-0183 XDR sentences (USB Serial with baud rate 4800) like this:
 
