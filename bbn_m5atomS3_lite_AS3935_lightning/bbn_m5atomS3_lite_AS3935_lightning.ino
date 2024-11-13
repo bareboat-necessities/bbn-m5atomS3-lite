@@ -27,7 +27,7 @@ void setup() {
   pinMode(lightningInt, INPUT); // When lightning is detected the interrupt pin goes HIGH.
 
   Wire.begin();
-  if ( !lightning.begin(Wire) ) {
+  if (!lightning.begin(Wire)) {
     //Serial.println("Lightning Detector did not start!");
     while (1);
   }
@@ -39,6 +39,8 @@ void setup() {
   lightning.lightningThreshold(lightningThresh);
   lightning.setIndoorOutdoor(INDOOR);
   //lightning.setIndoorOutdoor(OUTDOOR);
+  
+  //Serial.println("Lightning Detector did start!");
 }
 
 void loop() {
