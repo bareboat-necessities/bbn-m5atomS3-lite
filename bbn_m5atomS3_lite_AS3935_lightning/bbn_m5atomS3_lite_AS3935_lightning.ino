@@ -26,9 +26,9 @@ void setup() {
 
   pinMode(lightningInt, INPUT); // When lightning is detected the interrupt pin goes HIGH.
 
-  Wire.begin(); 
+  Wire.begin();
   if ( !lightning.begin(Wire) ) {
-    Serial.println("Lightning Detector did not start!");
+    //Serial.println("Lightning Detector did not start!");
     while (1);
   }
 
@@ -56,13 +56,8 @@ void loop() {
       Serial.println("Lightning Strike Detected!");
       // Lightning! Now how far away is it? Distance estimation takes into
       // account any previously seen events in the last 15 seconds.
-      byte distance = lightning.distanceToStorm();
-      Serial.print("Approximately: ");
-      Serial.print(distance);
-      Serial.println("km away!");
-      long lightning_energy = lightning.lightningEnergy();
-      Serial.print("Lightning Energy: ");
-      Serial.println(lightning_energy);
+      gen_nmea0183_xdr("$BBXDR,D,%.0f,M,LIGHTNING_RANGE", (float)lightning.distanceToStorm() * 1000.0);
+      gen_nmea0183_xdr("$BBXDR,X,%.0f,,LIGHTNING_LEVEL", (float)lightning.lightningEnergy());
     }
   }
   delay(100);
