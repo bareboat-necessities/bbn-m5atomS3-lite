@@ -1,4 +1,5 @@
 #include <M5AtomS3.h>
+#include "NmeaXDR.h"
 
 struct AngleInput {
   int potentiometerPin = G8;  // set the pin for the potentiometer.
@@ -33,7 +34,6 @@ void measure_angle(AngleInput* a) {
 void loop() {
   measure_angle(&angle_input);
   //Serial.println(angle_input.avg_sensorValue);
-  Serial.println(angle_input.angle);
-  delay(200);
+  gen_nmea0183_xdr("$BBXDR,A,%.1f,D,ANGLE", (float)angle_input.angle);      // Angle degrees
+  delay(500);
 }
-
