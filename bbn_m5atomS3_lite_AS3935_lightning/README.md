@@ -9,6 +9,6 @@ $BBXDR,D,4500,M,LIGHTNING_RANGE*xx
 $BBXDR,X,100,,LIGHTNING_LEVEL*xx
 ````
 
-DFRobot AS3935 Lightning Detector:
+DFRobot Gravity AS3935 Lightning Detector:
 
 https://www.dfrobot.com/product-1828.html
