@@ -37,6 +37,7 @@ More: https://github.com/GaryWSmith/xdr-parser-plugin
 - [BBN Boat Heave Sensor using IMU on M5Stack AtomS3](https://github.com/bareboat-necessities/bbn-wave-period-esp32)
 - [DIY NMEA 2000 to USB gateway in Actisense format on M5Atom-Lite](https://github.com/bareboat-necessities/bbn-nmea200-m5atom/tree/main/bbn-nmea2000-usb-gw-m5atom)
 - [NMEA 2000 environmental sensors on M5Atom-Lite](https://github.com/bareboat-necessities/bbn-nmea200-m5atom/tree/main/bbn-nmea2000-env-m5atom)
+- [Sending WhatsApp alerts from AtomS3-lite with AtomPoE Base](https://github.com/bareboat-necessities/bbn-m5atomS3-lite/tree/main/bbn_m5atomS3_lite_whatsapp)
 
 ## TODO:
 
