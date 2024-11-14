@@ -43,7 +43,7 @@ void setup() {
   lightning.setIndoorOutdoor(INDOOR);
   //lightning.setIndoorOutdoor(OUTDOOR);
 
-  Serial.println("Lightning Detector did start!");
+  //Serial.println("Lightning Detector did start!");
 }
 
 void loop() {
