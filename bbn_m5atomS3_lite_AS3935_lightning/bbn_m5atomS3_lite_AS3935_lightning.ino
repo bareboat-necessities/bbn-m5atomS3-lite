@@ -37,8 +37,8 @@ void setup() {
 
   lightning.maskDisturber(true);
   lightning.setNoiseLevel(noiseFloor);
-  lightning.watchdogThreshold(watchDogVal);
-  lightning.spikeRejection(spike);
+  //lightning.watchdogThreshold(watchDogVal);
+  //lightning.spikeRejection(spike);
   //lightning.lightningThreshold(lightningThresh);
   lightning.setIndoorOutdoor(INDOOR);
   //lightning.setIndoorOutdoor(OUTDOOR);
