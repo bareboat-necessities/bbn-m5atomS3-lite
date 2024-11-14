@@ -43,9 +43,7 @@ More: https://github.com/GaryWSmith/xdr-parser-plugin
 
 ## TODO:
 
-- Lightning detector sensor
 - UV Light intencity
-- Range (Time of Flight)
 - Engine RPM Meter
 - Compass
 - Boat Pitch and Roll
