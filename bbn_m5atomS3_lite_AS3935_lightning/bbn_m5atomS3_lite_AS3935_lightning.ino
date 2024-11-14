@@ -5,7 +5,7 @@
 // 0x03 is default i2c address, but the address can also be 0x02, 0x01.
 // Adjust the address jumpers on the underside of the product.
 // C - SCL i2c clock
-// D - SDL i2c data
+// D - SDA i2c data
 #define AS3935_ADDR 0x03
 #define LIGHTNING_INT 0x08
 #define DISTURBER_INT 0x04
@@ -26,7 +26,7 @@ void setup() {
   AtomS3.begin(cfg);
   Serial.begin(4800);
 
-  Wire.begin(G2 /* SDL */, G1 /* SCL */, 100000UL);
+  Wire.begin(G2 /* SDA */, G1 /* SCL */, 100000UL);
 
   pinMode(lightningInt, INPUT); // When lightning is detected the interrupt pin goes HIGH.
 
