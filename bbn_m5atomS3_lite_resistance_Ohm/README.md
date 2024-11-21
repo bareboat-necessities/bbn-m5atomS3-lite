@@ -44,8 +44,8 @@ $$
 esp32 ADC is not the best:
 
 - The ESP32 has two 12-bit ADCs
-- Noisy (Can be corrected by statistical sampling which will reduce sampling rate for accurate measurements)
-- Non-linear (Corrected by polynomial approximation)
+- Noisy (can be corrected by statistical sampling which will reduce sampling rate for accurate measurements)
+- Non-linear (can be corrected by polynomial approximation)
 - Almost ignores ranges < 0.14v and > 2.6v
 - The ESP32 ADC can measure voltage levels between 0 V and 3.3 V. The measured voltage is assigned a value between 0 and 4095, with 0 V corresponding to 0 and 3.3 V corresponding to 4095
 - However, the output can be made accurate to within 1% on input range of 0.14 to 2.6 volts
