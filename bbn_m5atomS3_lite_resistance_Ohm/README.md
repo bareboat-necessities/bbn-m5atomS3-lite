@@ -97,3 +97,6 @@ $$
 \end{flalign}
 $$
 
+Pick up resistor with higher tolerance.
+
+
