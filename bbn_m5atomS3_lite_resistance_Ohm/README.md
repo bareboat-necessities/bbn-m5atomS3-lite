@@ -18,3 +18,20 @@ Either the variable resistor is close to GND (DOWNSTREAM) or it is closer to VCC
 
 
 ![image](img/VoltageDivider.png)
+
+
+$$
+\begin{flalign}
+& \large {V _{ref} \over {R _{ref} + R _{sensor}}} = {V _{mes} \over {R _{ref}}}&
+\end{flalign}
+$$
+
+
+$$
+\begin{flalign}
+& \large {V _{ref} \over {R _{ref} + R _{sensor}}} = {V _{mes} \over {R _{sensor}}}&
+\end{flalign}
+$$
+
+
+
