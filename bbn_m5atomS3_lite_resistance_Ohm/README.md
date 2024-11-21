@@ -97,6 +97,6 @@ $$
 \end{flalign}
 $$
 
-Pick up resistor with higher tolerance.
+Pick up resistor with lower % tolerance.
 
 
