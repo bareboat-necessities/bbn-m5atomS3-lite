@@ -81,7 +81,7 @@ $$
 \end{flalign}
 $$
 
-So appropriate sizes are (in Ohms):
+Appropriate sizes are (in Ohms):
 
 $$
 \begin{flalign}
