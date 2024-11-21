@@ -1,4 +1,4 @@
-= Resistance sensor
+# Resistance sensor with M5Stack AtomS3-Lite
 
 In order to measure the resistance you can measure voltage using ADC (analog) input esp32 pin on a voltage divider circuit.
 
