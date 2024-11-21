@@ -81,12 +81,12 @@ $$
 \end{flalign}
 $$
 
-So appropriate sizes are:
+So appropriate sizes are (in Ohms):
 
 $$
 \begin{flalign}
-\text{ Upstream: } \newline \newline
-&  15 Ohm \lt  R _{sensor} \lt 33 Ohm  \newline &
+\text{ Upstream: } \newline
+&  15  \lt  R _{sensor} \lt 33 &
 \end{flalign}
 $$
 
