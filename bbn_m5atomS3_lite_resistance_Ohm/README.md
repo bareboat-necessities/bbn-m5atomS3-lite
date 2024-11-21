@@ -25,7 +25,6 @@ $$
 & \large {V _{ref} \over {R _{ref} + R _{sensor}}} = {V _{mes} \over {R _{ref}}} \Rightarrow 
  R _{sensor} = {R _{ref} {V _{mes} \over {V _{ref} - V _{mes}}}} &
 \end{flalign}
-
 $$
 
 
