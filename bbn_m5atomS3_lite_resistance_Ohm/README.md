@@ -52,6 +52,10 @@ esp32 ADC is not the best:
 - However, the output can be made accurate to within 1% on input range of 0.14 to 2.6 volts
 
 
+## For precise measurements use external ADC
 
+Examples:  
+- ADS1115  https://docs.m5stack.com/en/unit/vmeter
+- INA219   https://www.adafruit.com/product/904
 
 
