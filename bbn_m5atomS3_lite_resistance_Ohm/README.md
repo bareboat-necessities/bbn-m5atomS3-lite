@@ -21,6 +21,7 @@ Either the variable resistor is close to GND (DOWNSTREAM) or it is closer to VCC
 
 ## Downstream
 
+
 $$
 \begin{flalign}
 & \large {V _{ref} \over {R _{ref} + R _{sensor}}} = {V _{mes} \over {R _{sensor}}} \text{ } \Rightarrow \text{ }
@@ -28,7 +29,9 @@ $$
 \end{flalign}
 $$
 
+
 ## Upstream
+
 
 $$
 \begin{flalign}
