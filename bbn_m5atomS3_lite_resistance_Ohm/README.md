@@ -30,7 +30,8 @@ $$
 
 $$
 \begin{flalign}
-& \large {V _{ref} \over {R _{ref} + R _{sensor}}} = {V _{mes} \over {R _{sensor}}}&
+& \large {V _{ref} \over {R _{ref} + R _{sensor}}} = {V _{mes} \over {R _{sensor}}} \text{ } \Rightarrow \text{ }
+ R _{sensor} = {R _{ref} {V _{mes} \over {V _{ref} - V _{mes}}}}&
 \end{flalign}
 $$
 
