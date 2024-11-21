@@ -58,4 +58,16 @@ Examples:
 - ADS1115  https://docs.m5stack.com/en/unit/vmeter
 - INA219   https://www.adafruit.com/product/904
 
+## Resistance based sensors
+
+There are two types of commonly used resistance based sensors:
+- European 0-190 ohms range (often 10-180 ohms working range)
+- American Standard 240-33 ohms
+
+Examples:
+
+- Fuel level (10-180 Ohm or 0-190 Ohm range)
+- Oil pressure 
+- Rudder position
+- Trim
 
