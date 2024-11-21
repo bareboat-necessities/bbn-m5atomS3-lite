@@ -68,6 +68,6 @@ Examples:
 
 - Fuel level (10-180 Ohm or 0-190 Ohm range)
 - Oil pressure 
-- Rudder position
+- Rudder position (10-180 Ohms)
 - Trim
 
