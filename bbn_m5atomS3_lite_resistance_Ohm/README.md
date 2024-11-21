@@ -48,6 +48,7 @@ esp32 ADC is not the best:
 - Non-linear (can be corrected by polynomial approximation)
 - Almost ignores ranges < 0.14v and > 2.6v
 - The ESP32 ADC can measure voltage levels between 0 V and 3.3 V. The measured voltage is assigned a value between 0 and 4095, with 0 V corresponding to 0 and 3.3 V corresponding to 4095
+- ADCs in the esp32 have an attenuator stage at their inputs; the suggested range for 11Db attenuation is 2600mV at best (even though the ADC's range is 0-3.3v)
 - However, the output can be made accurate to within 1% on input range of 0.14 to 2.6 volts
 
 
