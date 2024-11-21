@@ -71,3 +71,14 @@ Examples:
 - Rudder position (10-180 Ohms)
 - Trim
 
+Constraints for selecting a reference resistor size for these types of sensors:
+
+$$
+\begin{flalign}
+& V _{ref} = 3.3 \newline & 
+8 \lt  R _{sensor} \lt 240  \newline &
+0.14 \lt  V _{mes} \lt 2.6 &
+\end{flalign}
+$$
+
+
