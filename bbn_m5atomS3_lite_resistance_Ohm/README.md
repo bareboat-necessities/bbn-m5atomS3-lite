@@ -15,3 +15,6 @@ Ohm Law can be used to calculate unknown resistance from voltage drop (knowing r
 There are two kinds of configurations for this circuit: 
 
 Either the variable resistor is close to GND (DOWNSTREAM) or it is closer to VCC (UPSTREAM).
+
+
+![image](img/VoltageDivider.png)
