@@ -86,14 +86,14 @@ So appropriate sizes are (in Ohms):
 $$
 \begin{flalign}
 & \text{ Upstream: } \newline &
-15  \lt  R _{sensor} \lt 33 &
+15  \lt  R _{ref} \lt 33 &
 \end{flalign}
 $$
 
 $$
 \begin{flalign}
 & \text{ Downstream: } \newline &
-68  \lt  R _{sensor} \lt 220 &
+68  \lt  R _{ref} \lt 220 &
 \end{flalign}
 $$
 
