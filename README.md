@@ -52,6 +52,8 @@ More: https://github.com/GaryWSmith/xdr-parser-plugin
 - Bilge Sensors
 - Fuel Level
 - Anchor Chain Counter
+- Dingy Locator with GPS and LoRa
+
 
 
 ## Project Home
