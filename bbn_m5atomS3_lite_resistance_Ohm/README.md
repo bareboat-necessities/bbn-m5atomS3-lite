@@ -70,6 +70,7 @@ Examples:
 - Oil pressure 
 - Rudder position (10-180 Ohms)
 - Trim
+- Resistive Temperature Sensors
 
 Constraints for selecting a reference resistor size for these types of sensors:
 
