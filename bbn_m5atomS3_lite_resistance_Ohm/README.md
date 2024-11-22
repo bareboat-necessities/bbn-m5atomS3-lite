@@ -99,4 +99,18 @@ $$
 
 Pick up resistor with lower % tolerance.
 
+## NMEA 0183 XDR Sentences for resistance
+
+NMEA 0183 is on USB serial with baud rate of 4800
+
+Example sentences:
+
+````
+$BBXDR,G,135.4,O,Ohms_esp32*6A
+$BBXDR,G,137.9,O,Ohms_esp32*65
+$BBXDR,G,137.6,O,Ohms_esp32*6A
+$BBXDR,G,137.6,O,Ohms_esp32*6A
+$BBXDR,G,138.1,O,Ohms_esp32*62
+$BBXDR,G,138.3,O,Ohms_esp32*60
+````
 
