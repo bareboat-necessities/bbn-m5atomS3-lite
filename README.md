@@ -24,6 +24,7 @@ The sensors stream NMEA-0183 XDR sentences via USB
 - [Benewake TFmini-S UART LiDAR sensor](https://github.com/bareboat-necessities/bbn-m5atomS3-lite/tree/main/bbn_m5atomS3_lite_TFminiS_range_lidar)
 - [M5Stack Angle input sensor](https://github.com/bareboat-necessities/bbn-m5atomS3-lite/tree/main/bbn_m5atomS3_lite_angle_unit)
 - [Lightning Strike Detector Sensor AS3935](https://github.com/bareboat-necessities/bbn-m5atomS3-lite/tree/main/bbn_m5atomS3_lite_AS3935_lightning)
+- [Resistance 0-240 Ohm Sensor with esp32 ADC and voltage divider](https://github.com/bareboat-necessities/bbn-m5atomS3-lite/blob/main/bbn_m5atomS3_lite_resistance_Ohm)
 
 ## Integration with SignalK
 
