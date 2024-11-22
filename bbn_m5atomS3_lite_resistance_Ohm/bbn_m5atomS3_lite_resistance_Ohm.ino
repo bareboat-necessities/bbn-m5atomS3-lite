@@ -10,6 +10,14 @@ double readVoltage(byte pin) {
   return (-0.000000000000016 * pow(reading, 4) + 0.000000000118171 * pow(reading, 3) - 0.000000301211691 * pow(reading, 2) + 0.001109019271794 * reading + 0.034143524634089) * 1000;
 } // Added an improved polynomial, use either, comment out as required
 
+double readVoltageAvg(byte pin, int samples) {
+  double sum = 0.0;
+  for (int i = 0; i < samples; i++) {
+    sum += readVoltage(pin);
+  }
+  return sum / samples;
+}
+
 enum ResistanceConfiguration {
   UPSTREAM,
   DOWNSTREAM,
@@ -19,20 +27,21 @@ unsigned long timeout = 0;
 int adc_voltage_pin = G8;
 
 ResistanceConfiguration voltage_divider_type = DOWNSTREAM;
-float reference_voltage = 3.3;     // in volts
-float reference_resistance = 100;  // in Ohms
+double reference_voltage = 3.3;     // in volts
+double reference_resistance = 100;  // in Ohms
 
 void setup() {
   auto cfg = M5.config();
   AtomS3.begin(cfg);
   pinMode(adc_voltage_pin, INPUT);
+  analogSetPinAttenuation(adc_voltage_pin, ADC_11db); // for range 0-2.6v
   Serial.begin(4800);
 }
 
 void loop() {
   if (timeout < millis()) {
-    float volt = readVoltage(adc_voltage_pin) * reference_voltage / 4095;
-    float measured_resistance = 0.0;
+    double volt = readVoltageAvg(adc_voltage_pin, 16) * reference_voltage / 4095;
+    double measured_resistance = 0.0;
     switch (voltage_divider_type) {
       case UPSTREAM:
         if (volt == 0.0f) {
