@@ -28,6 +28,7 @@ struct ResistanceSensor {
   ResistanceConfiguration voltage_divider_type = DOWNSTREAM;
   double reference_voltage = 3.3;     // in volts
   double reference_resistance = 100;  // in Ohms
+  double measured_resistance;         // in Ohms
 };
 
 void ResistanceSensor_init(ResistanceSensor* rs, int pin, ResistanceConfiguration conf, 
