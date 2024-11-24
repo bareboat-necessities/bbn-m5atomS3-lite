@@ -43,8 +43,8 @@ void ResistanceSensor_init(ResistanceSensor* rs, int pin, ResistanceConfiguratio
 }
 
 void ResistanceSensor_read(ResistanceSensor* rs) {
-  double rs->volt = readVoltageAvg(rs->adc_voltage_pin, 16) * rs->reference_voltage / 4095;
-  double rs->measured_resistance = 0.0;
+  rs->volt = readVoltageAvg(rs->adc_voltage_pin, 16) * rs->reference_voltage / 4095;
+  rs->measured_resistance = 0.0;
   switch (rs->voltage_divider_type) {
     case UPSTREAM:
       if (rs->volt == 0.0f) {
