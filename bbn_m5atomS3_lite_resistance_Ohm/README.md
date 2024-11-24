@@ -78,7 +78,7 @@ $$
 \begin{flalign}
 & V _{ref} = 3.3 \newline & 
 8 \lt  R _{sensor} \lt 240  \newline &
-0.14 \lt  V _{mes} \lt 2.6 &
+0.14 \lt  V _{meas} \lt 2.6 &
 \end{flalign}
 $$
 
