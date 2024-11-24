@@ -25,6 +25,7 @@ The sensors stream NMEA-0183 XDR sentences via USB
 - [M5Stack Angle input sensor](https://github.com/bareboat-necessities/bbn-m5atomS3-lite/tree/main/bbn_m5atomS3_lite_angle_unit)
 - [Lightning Strike Detector Sensor AS3935](https://github.com/bareboat-necessities/bbn-m5atomS3-lite/tree/main/bbn_m5atomS3_lite_AS3935_lightning)
 - [Resistance 0-240 Ohm Sensor with esp32 ADC and voltage divider](https://github.com/bareboat-necessities/bbn-m5atomS3-lite/blob/main/bbn_m5atomS3_lite_resistance_Ohm)
+- [Bilge Level with JSN-SR04T Waterproof Ultrasonic Sensor](https://github.com/bareboat-necessities/bbn-m5atomS3-lite/tree/main/bbn_m5atomS3_lite_JSN-SR04T)
 
 ## Integration with SignalK
 
