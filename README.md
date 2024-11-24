@@ -27,7 +27,7 @@ The sensors stream NMEA-0183 XDR sentences via USB
 - [Resistance 0-240 Ohm Sensor with esp32 ADC and voltage divider](https://github.com/bareboat-necessities/bbn-m5atomS3-lite/blob/main/bbn_m5atomS3_lite_resistance_Ohm)
 - [Bilge Level with JSN-SR04T Waterproof Ultrasonic Sensor](https://github.com/bareboat-necessities/bbn-m5atomS3-lite/tree/main/bbn_m5atomS3_lite_JSN-SR04T)
 - [Fuel Level](https://github.com/bareboat-necessities/bbn-m5atomS3-lite/tree/main/bbn_m5atomS3_lite_fuel_level)
-- [Engine Oil Presure](https://github.com/bareboat-necessities/bbn-m5atomS3-lite/tree/main/bbn_m5atomS3_lite_oil_pressure)
+- [Engine Oil Pressure](https://github.com/bareboat-necessities/bbn-m5atomS3-lite/tree/main/bbn_m5atomS3_lite_oil_pressure)
 
 ## Integration with SignalK
 
