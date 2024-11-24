@@ -13,6 +13,14 @@ Pins:
 - VCC 3.3 to VCC
 - GND to GND
 
+## Bilge Level Sensor
+
+Install it into a cap of PVC pipe. 
+Drill a hole for air to escape. 
+Mount PVC pipe with sensor on top of it
+in a bilge. The sensor will measure distance to water surface in the bilge,
+giving you bilge level.
+
 ## NMEA 0183 XDR
 
 Produces NMEA 0183 XDR via USB serial with baud rate 4800
