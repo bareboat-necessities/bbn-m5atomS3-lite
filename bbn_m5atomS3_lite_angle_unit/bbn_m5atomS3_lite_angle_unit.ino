@@ -9,8 +9,6 @@ struct AngleInput {
   int angle;
 };
 
-AngleInput angle_input;
-
 void measure_angle(AngleInput* a) {
   const int iter = 100;
   a->avg_sensorValue = 0;
@@ -23,6 +21,8 @@ void measure_angle(AngleInput* a) {
   if (a->angle > 180) a->angle = 180;
   if (a->angle < -180) a->angle = -180;
 }
+
+AngleInput angle_input;
 
 void setup() {
   auto cfg = M5.config();
