@@ -1,9 +1,10 @@
 #include <M5AtomS3.h>
 #include <NewPing.h>
+#include "NmeaXDR.h"
 
 #define TRIGGER_PIN  G7  // Pin tied to trigger pin on the ultrasonic sensor.
 #define ECHO_PIN     G8  // Pin tied to echo pin on the ultrasonic sensor.
-#define MAX_DISTANCE 75  // Maximum distance we want to ping for (in centimeters). Maximum sensor distance is rated at 400-500cm.
+#define MAX_DISTANCE 100 // Maximum distance we want to ping for (in centimeters). Maximum sensor distance is rated at 400-500cm.
 
 NewPing sonar(TRIGGER_PIN, ECHO_PIN, MAX_DISTANCE); // NewPing setup of pins and maximum distance.
 
@@ -13,12 +14,11 @@ float factor = sqrt(1 + temp / 273.15) / 60.368; // Speed of sound calculation b
 void setup() {
   auto cfg = M5.config();
   AtomS3.begin(cfg);
-  Serial.begin(4800); 
+  Serial.begin(4800);
 }
 
 void loop() {
-  delay(1000); // Wait 1 second between distance readings.
-  Serial.print("Ping: ");
-  Serial.print((float)sonar.ping_median(5) * factor); // Send 5 pings, get median distance, convert to cm and print result
-  Serial.println("cm");
+  delay(1000);
+  float distance_cm = (float)sonar.ping_median(5) * factor;
+  gen_nmea0183_xdr("$BBXDR,D,%.2f,M,Range_JSN_S04T", distance_cm / 100.0);
 }
