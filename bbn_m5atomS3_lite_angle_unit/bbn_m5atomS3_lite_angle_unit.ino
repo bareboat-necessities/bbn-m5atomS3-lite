@@ -11,13 +11,6 @@ struct AngleInput {
 
 AngleInput angle_input;
 
-void setup() {
-  auto cfg = M5.config();
-  AtomS3.begin(cfg);
-  Serial.begin(4800);
-  pinMode(angle_input.potentiometerPin, INPUT);  // Sets the specified pin to input mode.
-}
-
 void measure_angle(AngleInput* a) {
   const int iter = 100;
   a->avg_sensorValue = 0;
@@ -29,6 +22,13 @@ void measure_angle(AngleInput* a) {
   a->angle = (180 - (360 * (a->avg_sensorValue - a->min_value) / (a->max_value - a->min_value)));
   if (a->angle > 180) a->angle = 180;
   if (a->angle < -180) a->angle = -180;
+}
+
+void setup() {
+  auto cfg = M5.config();
+  AtomS3.begin(cfg);
+  Serial.begin(4800);
+  pinMode(angle_input.potentiometerPin, INPUT);  // Sets the specified pin to input mode.
 }
 
 void loop() {
