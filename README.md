@@ -35,6 +35,10 @@ Integration with SignalK is done via NMEA XDR Parser SignalK plugin.
 
 More: https://github.com/GaryWSmith/xdr-parser-plugin
 
+## Required Libraries
+
+For required libraries and their versions see .github/workflows/build.yaml
+
 ## More BBN devices
 
 - [M5Stack Tough (ESP-32) Sailing Instruments Color Touch Waterproof Display and Autopilot Control](https://github.com/bareboat-necessities/bbn-m5stack-tough)
