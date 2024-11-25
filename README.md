@@ -51,9 +51,7 @@ More: https://github.com/GaryWSmith/xdr-parser-plugin
 - Engine RPM Meter
 - Compass
 - Boat Pitch and Roll
-- Oil Pressure
 - Bilge Sensors
-- Fuel Level
 - Anchor Chain Counter
 - Dingy Locator with GPS and LoRa
 
