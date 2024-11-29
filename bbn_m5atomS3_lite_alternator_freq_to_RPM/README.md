@@ -7,3 +7,7 @@ You can find them searching Internet for:
 
 817 optocoupler isolation module
 
+The circuit of the boars looks like this:
+
+
+![PC817 optocoupler isolation module board](img/PC817_optocoupler_circuit.png)
