@@ -27,5 +27,5 @@ Input from alternator:
 
 Output to esp32:
 - Board 3-pin output terminal GND to esp32 GND
-- Board 3-pin output terminal VCC to esp32 3.3v
+- Board 3-pin output terminal VCC to esp32 +3.3v VCC
 - Board 3-pin output terminal OUT to some analog input pin on esp32
