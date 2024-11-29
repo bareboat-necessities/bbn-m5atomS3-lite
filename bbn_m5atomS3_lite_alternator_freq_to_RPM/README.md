@@ -32,9 +32,13 @@ Output to esp32:
 
 ## ESP32 code
 
+### Interrupt counting
+
 Attach an interrupt handler function in RISING edge to analog input pin.
 
 Add logic to debounce interrupt. IF you do not know what 'debouncing of interrupt' you can google it.
+
+### Debouncing interrupts
 
 Debounce timeout. Let's say your engine RPM gauge goes to 5000 RPM and alternalor has N-poles.
 And "transfer number" on an alternator belt (makes alernator RPM differ from engine RPM).
@@ -52,6 +56,8 @@ Let's say there are 12 poles on alternator N = 12, R = 1.
 1/1000Hz = 0.001 sec = 1 millisecond
 
 So debouncing time of 200 microseconds should be reasonable.
+
+### Critical section of pulse counting
 
 On esp32 there has to be added some synchronization code on the critical section of interrupts (pulses) counting.
 
