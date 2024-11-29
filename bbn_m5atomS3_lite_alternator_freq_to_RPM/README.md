@@ -36,12 +36,13 @@ Attach an interrupt handler function in RISING edge to analog input pin.
 
 Add logic to debounce interrupt. IF you do not know what 'debouncing of interrupt' you can google it.
 
-Debounce timeout. If your engine RPM gauge goes to 5000 RPM and alternalor has N-poles.
+Debounce timeout. Let's say your engine RPM gauge goes to 5000 RPM and alternalor has N-poles.
+And "transfer number" on an alternator belt (makes alernator RPM differ from engine RPM).
 Then the frequency of alternator signal can be up to
 
 5000 * N / 60   Hz
 
-Let's say there are 12 poles on alternator N = 12.
+Let's say there are 12 poles on alternator N = 12, R = 1.
 
 5000 * 12 / 60 = 1000 Hz
 
