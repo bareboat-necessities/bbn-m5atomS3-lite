@@ -18,3 +18,14 @@ There are different variations of the board for 12V input signal or 24V with dif
 Select appropriate one for your alternator voltage. 
 
 Alternator has a terminal marked 'W' which gives a sine wave form of the alternator output.
+
+## Connections
+
+Input from alternator:
+- Alternator ground to Board '-' INPUT on 2-pin terminal
+- Alternator 'W' to Board '+' INPUT on 2-pin terminal
+
+Output to esp32:
+- Board 3-pin output terminal GND to esp32 GND
+- Board 3-pin output terminal VCC to esp32 3.3v
+- Board 3-pin output terminal OUT to some analog input pin on esp32
