@@ -47,7 +47,7 @@ Let's say there are 12 poles on alternator N = 12.
 
 1/1000Hz = 0.001 sec = 1 millisecond
 
-So debouncing time of 100 microseconds should be ok.
+So debouncing time of 200 microseconds should be reasonable.
 
 On esp32 there has to be added some synchronization code on the critical section of interrupts (pulses) counting.
 
