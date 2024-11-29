@@ -29,3 +29,20 @@ Output to esp32:
 - Board 3-pin output terminal GND to esp32 GND
 - Board 3-pin output terminal VCC to esp32 +3.3v VCC
 - Board 3-pin output terminal OUT to some analog input pin on esp32
+
+## ESP32 code
+
+Attach an interrupt handler function in RISING edge to analog input pin.
+
+Add logic to debounce interrupt. IF you do not know what 'debouncing of interrupt' you can google it.
+
+Debounce timeout. If your engine RPM gauge goes to 5000 RPM and alternalor has N-poles.
+Then the frequency of alternator signal can be up to
+
+5000 * N / 60   Hz
+
+
+
+On esp32 there has to be added some synchronization code on the critical section of interrupts (pulses) counting.
+
+
