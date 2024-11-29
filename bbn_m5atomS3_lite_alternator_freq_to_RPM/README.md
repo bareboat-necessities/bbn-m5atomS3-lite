@@ -38,9 +38,12 @@ Add logic to debounce interrupt. IF you do not know what 'debouncing of interrup
 
 Debounce timeout. Let's say your engine RPM gauge goes to 5000 RPM and alternalor has N-poles.
 And "transfer number" on an alternator belt (makes alernator RPM differ from engine RPM).
+The ratio between alternator RPM and engine RPM is usually 2.5 to 1.
+For example, if engine is rotating at 1000RPM and ratio is 2.5 then the alternator
+spins at 2500 RPM.
 Then the frequency of alternator signal can be up to
 
-5000 * N / 60   Hz
+5000 * N * R / 60   Hz
 
 Let's say there are 12 poles on alternator N = 12, R = 1.
 
