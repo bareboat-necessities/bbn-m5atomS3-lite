@@ -115,3 +115,13 @@ $BBXDR,G,138.1,O,Ohms_esp32*62
 $BBXDR,G,138.3,O,Ohms_esp32*60
 ````
 
+## Ready made voltage divider PCBs
+
+There are numerous ready made voltage
+divider PCBs. Look for
+
+- Grove Voltage Divider with adjustable gain
+- DFRobot DFR0051 Voltage Divider
+- Phidgets 1121 Voltage Divider
+
+
