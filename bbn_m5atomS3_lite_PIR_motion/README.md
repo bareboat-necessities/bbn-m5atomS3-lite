@@ -14,3 +14,4 @@ M5Stack PIR Motion Sensor (AS312)
 
 https://shop.m5stack.com/products/pir-module
 
+Can detect a walrus on your boat or soneone else :) 
