@@ -12,6 +12,7 @@ Can be used for
 - Fridge temperature
 - Engine coolant temperature
 - Batteries bank temperature
+- MPPT controller temperature
 - etc
 
 Supports multiple 1-wire Dallas Temperature sensors.
