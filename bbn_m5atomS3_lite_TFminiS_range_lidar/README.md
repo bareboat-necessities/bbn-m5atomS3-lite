@@ -11,3 +11,5 @@ $BBXDR,D,0.20,M,RANGE_TFminiS*xx
 Benewake TFmini-S UART LiDAR:
 
 https://en.benewake.com/TFminiS/
+
+Used by some to measure bilge levels. 
