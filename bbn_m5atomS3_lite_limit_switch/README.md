@@ -17,3 +17,6 @@ $BBXDR,S,0,,LIMIT_CUR*63
 M5Stack Limit Switch
 
 https://shop.m5stack.com/products/limit-switch-unit
+
+Used for detecting a hatch state (open/closed), etc
+
