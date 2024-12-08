@@ -49,6 +49,19 @@ For required libraries and their versions see .github/workflows/build.yaml
 - [Sending WhatsApp alerts from AtomS3-lite with AtomPoE Base](https://github.com/bareboat-necessities/bbn-m5atomS3-lite/tree/main/bbn_m5atomS3_lite_whatsapp)
 - [Detecting Devices on i2c bus](https://github.com/bareboat-necessities/bbn-m5atomS3-lite/tree/main/bbn_m5atomS3_lite_i2c_detect)
 
+
+## Mounting m5stack products
+
+m5stack SandwichC Brick:
+
+https://shop.m5stack.com/products/sandwichc-brick
+
+
+m5stack ClipB Brick
+
+https://shop.m5stack.com/products/m5stack-clip-b-brick-kit
+
+
 ## TODO:
 
 - UV Light intencity
