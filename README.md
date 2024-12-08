@@ -57,10 +57,13 @@ m5stack SandwichC Brick:
 https://shop.m5stack.com/products/sandwichc-brick
 
 
-m5stack ClipB Brick
+m5stack ClipB Brick:
 
 https://shop.m5stack.com/products/m5stack-clip-b-brick-kit
 
+m5stack ClipA Brick:
+
+https://shop.m5stack.com/products/m5stack-clip-a-brick-kit
 
 ## TODO:
 
