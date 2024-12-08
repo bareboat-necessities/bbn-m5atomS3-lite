@@ -65,6 +65,10 @@ m5stack ClipA Brick:
 
 https://shop.m5stack.com/products/m5stack-clip-a-brick-kit
 
+m5stack Screw Kit:
+
+https://shop.m5stack.com/products/16-pcs-m3-12-18-25-32-screw-with-allen-key
+
 ## TODO:
 
 - UV Light intencity
