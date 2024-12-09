@@ -79,6 +79,9 @@ YH2.0-4P
 
 Jst PH2.0 4 pin
 
+Grove to QWIIC adapter:
+
+https://www.sparkfun.com/products/15109
 
 
 
