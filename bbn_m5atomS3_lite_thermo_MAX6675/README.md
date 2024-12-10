@@ -17,3 +17,8 @@ $BBXDR,C,26.75,C,THERMOCOUPLE*6F
 ````
 
 https://www.amazon.com/HiLetgo-MAX6675-Thermocouple-Temperature-Arduino/dp/B01HT871SO
+
+## Use cases
+
+Exhaust gas temperature 
+
