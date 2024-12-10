@@ -83,6 +83,12 @@ Grove to QWIIC adapter:
 
 https://www.sparkfun.com/products/15109
 
+Ideas for enclosures:   https://www.polycase.com/
+
+LTC4311 I2C Extender / Active Terminator
+
+https://www.adafruit.com/product/4756
+
 
 
 ## TODO:
