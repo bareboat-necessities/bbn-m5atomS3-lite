@@ -89,7 +89,9 @@ LTC4311 I2C Extender / Active Terminator
 
 https://www.adafruit.com/product/4756
 
+## Customized Enclosures
 
+https://www.polycase.com/customized-enclosures
 
 ## TODO:
 
