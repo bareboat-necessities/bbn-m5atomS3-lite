@@ -12,7 +12,7 @@ void setup()   {
   Serial.begin(4800);
   Wire.begin(G2, G1, 100000UL);
   if (!ina219.begin()) {
-    Serial.println("Failed to find INA219 chip");
+    //Serial.println("Failed to find INA219 chip");
     while (1) {
       delay(10);
     }
