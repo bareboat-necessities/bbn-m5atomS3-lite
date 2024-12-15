@@ -3,6 +3,8 @@
 
 #include "NmeaXDR.h"
 
+Adafruit_INA219 ina219;
+
 void setup()   {
   auto cfg = M5.config();
   AtomS3.begin(cfg);
@@ -46,4 +48,3 @@ void loop() {
     timeout = millis() + 1000;
   }
 }
-
