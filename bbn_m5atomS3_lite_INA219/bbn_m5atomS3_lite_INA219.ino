@@ -4,6 +4,7 @@
 #include "NmeaXDR.h"
 
 Adafruit_INA219 ina219;
+unsigned long timeout = 0;
 
 void setup()   {
   auto cfg = M5.config();
