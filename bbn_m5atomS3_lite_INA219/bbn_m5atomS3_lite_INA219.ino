@@ -37,11 +37,6 @@ void loop() {
     float loadvoltage = busvoltage + (shuntvoltage / 1000);
     float power_mW = loadvoltage * current_mA;
 
-    // Mode 0, display volts and amps.
-    printSIValue(loadvoltage, "V:", 2, 10);
-    display.setCursor(0, 16);
-    printSIValue(current_mA / 1000.0, "A:", 5, 10);
-
     gen_nmea0183_xdr("$BBXDR,U,%.3f,V,VOLT_INA219", loadvoltage);
     gen_nmea0183_xdr("$BBXDR,I,%.3f,A,AMPS_INA219", current_mA / 1000);
     gen_nmea0183_xdr("$BBXDR,W,%.3f,W,WATT_INA219", power_mW / 1000);
