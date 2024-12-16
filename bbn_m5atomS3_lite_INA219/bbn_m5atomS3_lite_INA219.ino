@@ -4,6 +4,9 @@
 #include "NmeaXDR.h"
 
 #define INA219_I2C_ADDRESS_0 (0x40)
+#define INA219_I2C_ADDRESS_1 (0x41)   // Bridge A0 (on addresses pad)
+#define INA219_I2C_ADDRESS_2 (0x44)   // Bridge A1 (on addresses pad)
+#define INA219_I2C_ADDRESS_3 (0x45)   // Bridge A0 and A1 (on addresses pad)
 
 Adafruit_INA219 ina219(INA219_I2C_ADDRESS_0);
 unsigned long timeout = 0;
