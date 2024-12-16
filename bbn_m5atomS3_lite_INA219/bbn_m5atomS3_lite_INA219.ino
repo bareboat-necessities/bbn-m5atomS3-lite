@@ -43,9 +43,9 @@ void loop() {
     float loadvoltage = busvoltage + (shuntvoltage / 1000);
     float power_mW = loadvoltage * current_mA;
 
-    gen_nmea0183_xdr("$BBXDR,U,%.3f,V,VOLT_INA219", loadvoltage);
-    gen_nmea0183_xdr("$BBXDR,I,%.3f,A,AMPS_INA219", current_mA / 1000);
-    gen_nmea0183_xdr("$BBXDR,W,%.3f,W,WATT_INA219", power_mW / 1000);
+    gen_nmea0183_xdr("$BBXDR,U,%.3f,V,VOLT_INA219_0", loadvoltage);
+    gen_nmea0183_xdr("$BBXDR,I,%.3f,A,AMPS_INA219_0", current_mA / 1000);
+    gen_nmea0183_xdr("$BBXDR,W,%.3f,W,WATT_INA219_0", power_mW / 1000);
     timeout = millis() + 1000;
   }
 }
