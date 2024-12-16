@@ -3,9 +3,9 @@
 
 #include "NmeaXDR.h"
 
-#define INA219_I2C_ADDRESS (0x40)
+#define INA219_I2C_ADDRESS_0 (0x40)
 
-Adafruit_INA219 ina219(INA219_I2C_ADDRESS);
+Adafruit_INA219 ina219(INA219_I2C_ADDRESS_0);
 unsigned long timeout = 0;
 
 void setup()   {
