@@ -20,5 +20,7 @@ void setup() {
 void loop() {
   delay(1000);
   float distance_cm = (float)sonar.ping_median(5) * factor;
-  gen_nmea0183_xdr("$BBXDR,D,%.2f,M,Range_JSN_S04T", distance_cm / 100.0);
+  if (fabs(distance_cm) > 0.001) {
+    gen_nmea0183_xdr("$BBXDR,D,%.2f,M,Range_JSN_S04T", distance_cm / 100.0);
+  }
 }
