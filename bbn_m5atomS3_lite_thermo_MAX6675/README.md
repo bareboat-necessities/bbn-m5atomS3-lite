@@ -20,5 +20,14 @@ https://www.amazon.com/HiLetgo-MAX6675-Thermocouple-Temperature-Arduino/dp/B01HT
 
 ## Use cases
 
-Exhaust gas temperature 
+- Higher Temperature Ranges
+- Exhaust gas temperature
+
+## See Also
+
+https://github.com/adafruit/Adafruit_MCP9600
+
+Adafruit MCP9600 I2C Thermocouple Amplifier - K, J, T, N, S, E, B and R Type T
+
+https://www.adafruit.com/product/4101
 
