@@ -85,6 +85,12 @@ Grove to QWIIC adapter:
 
 https://www.sparkfun.com/products/15109
 
+VH3.96 - 4Pin Transfer Module Unit
+
+https://shop.m5stack.com/products/3-96-transfer-unit
+
+
+
 Ideas for enclosures:   https://www.polycase.com/
 
 LTC4311 I2C Extender / Active Terminator
