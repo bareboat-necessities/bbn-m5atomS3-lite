@@ -37,7 +37,7 @@
 //#define MOSI 33
 //#define CS   19
 
-byte mac[] = {0xDE, 0xAD, 0xBE, 0xEF, 0xFE, 0xED};  // Host name will be WIZnetEFFEED on local LAN (WIZnet + 3 last MAC octects)
+byte mac[] = {0xDE, 0xAD, 0xBE, 0xDE, 0xCA, 0xDE};  // Host name will be WIZnetDECADE on local LAN (WIZnet + 3 last MAC octects)
 
 EthernetServer server(80);
 
