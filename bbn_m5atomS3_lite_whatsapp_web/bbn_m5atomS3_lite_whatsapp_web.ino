@@ -40,7 +40,7 @@
 //#define MOSI 33
 //#define CS   19
 
-byte mac[] = {0xDE, 0xAD, 0xBE, 0xDE, 0xCA, 0xDE};  // Host name will be WIZnetDECADE on local LAN (WIZnet + 3 last MAC octects)
+byte mac[] = {0xDE, 0xAD, 0xBE, 0xDE, 0xCA, 0xDE};  // Host name will be WIZnetDECADE on local LAN (WIZnet + 3 last MAC octets)
 
 EthernetServer server(80);
 
@@ -58,16 +58,14 @@ unsigned long beginMicros, endMicros;
 unsigned long byteCount = 0;
 bool printWebData = true;  // set to false for better speed measurement
 
-
 void header_page(EthernetClient client, int request_status = 200) {
-  client.println("HTTP/1.1 " + String(request_status) + " Not found");
+  client.println("HTTP/1.1 " + String(request_status) + (request_status == 200 ? "OK" : "Not Found"));
   client.println("Content-Type: text/html");
   client.println("Connection: close");  // the connection will be closed after completion of the response
-  client.println("Refresh: 20");  // refresh the page automatically every 5 sec
   client.println();
   client.println("<!DOCTYPE HTML>");
-  client.println("<head><meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0, user-scalable=no\"><title>Control LED</title><style>html { font-family: Helvetica; display: inline-block; margin: 0px auto; text-align: center;}body{margin-top: 50px;} h1 {color: #444444;margin: 50px auto 30px;} h3 {color: #444444;margin-bottom: 50px;}.button {display: block;width: 80px;background-color: #3498db;border: none;color: white;padding: 13px 30px;text-decoration: none;font-size: 25px;margin: 0px auto 35px;cursor: pointer;border-radius: 4px;}.button-on {background-color: #3498db;}.button-on:active {background-color: #2980b9;}.button-off {background-color: #34495e;}.button-off:active {background-color: #2c3e50;}p {font-size: 14px;color: #888;margin-bottom: 10px;}</style></head>");
-  client.println("<html><h1>ESP32 Web Server</h1><h3>Using Station Mode</h3>");
+  client.println("<head><meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0, user-scalable=no\"><title>ESP32 Web</title><style>html { font-family: Helvetica; display: inline-block; margin: 0px auto; text-align: center;}body{margin-top: 50px;} h1 {color: #444444;margin: 50px auto 30px;} h3 {color: #444444;margin-bottom: 50px;}.button {display: block;width: 80px;background-color: #3498db;border: none;color: white;padding: 13px 30px;text-decoration: none;font-size: 25px;margin: 0px auto 35px;cursor: pointer;border-radius: 4px;}.button-on {background-color: #3498db;}.button-on:active {background-color: #2980b9;}.button-off {background-color: #34495e;}.button-off:active {background-color: #2c3e50;}p {font-size: 14px;color: #888;margin-bottom: 10px;}</style></head>");
+  client.println("<html><h2>ESP32 Web Server</h2>");
 }
 
 void footer_page(EthernetClient client) {   // The closing lines of every page
@@ -159,7 +157,8 @@ void loop() {
   EthernetClient client = server.available();
   if (client) {
     //Serial.println("new client");
-    String client_message = "";
+    String url_path = "";
+    String url_args = "";
     int argument_reading = 0;
 
     // An http request ends with a blank line
@@ -169,17 +168,19 @@ void loop() {
         char c = client.read();
 
         // get arguments. note: path arguments must not have any blank spaces
-        if (String(c) == " " || String(c) == "?") argument_reading++;
-        if (argument_reading == 1 && String(c) != " ") client_message = client_message + c;
+        if (c == ' ' /* after GET or POST */ || c == '?') argument_reading++;
+        if (argument_reading == 1 && c != ' ') url_path += c;
+        if (argument_reading == 2 && c != '?') url_args += c;
 
         // check end of request
         if (c == '\n' && currentLineIsBlank) {
-          // Send response
           // handle arguments
-          if (client_message == "/") handle_OnConnect(client);
-          else if (client_message == "/ledOn") handle_ledOn(client);
-          else if (client_message == "/ledOff") handle_ledOff(client);
-          else handle_NotFound(client, client_message);
+          Serial.println(url_path.c_str());
+          Serial.println(url_args.c_str());
+          if (url_path == "/") handle_OnConnect(client);
+          else if (url_path == "/ledOn") handle_ledOn(client);
+          else if (url_path == "/ledOff") handle_ledOff(client);
+          else handle_NotFound(client, url_path);
           break;
         }
         if (c == '\n') {
@@ -188,7 +189,6 @@ void loop() {
         } else if (c != '\r') {
           // you've gotten a character on the current line
           currentLineIsBlank = false;
-          //Serial.write("We're here");
         }
       }
     }
