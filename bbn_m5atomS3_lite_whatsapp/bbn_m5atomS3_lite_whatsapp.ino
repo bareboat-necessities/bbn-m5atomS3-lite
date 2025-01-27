@@ -2,7 +2,7 @@
 #include <M5AtomS3.h>
 #include <Arduino.h>
 #include <SPI.h>
-#include <EthernetLarge.h>
+#include <M5_Ethernet.h>
 #include <SSLClient.h>
 #include <UrlEncode.h>
 #include "trust_anchors.h"
