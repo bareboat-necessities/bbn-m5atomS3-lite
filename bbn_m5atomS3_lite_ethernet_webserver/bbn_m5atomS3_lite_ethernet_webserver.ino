@@ -41,7 +41,7 @@ byte mac[] = {0xDE, 0xAD, 0xBE, 0xDE, 0xCA, 0xDE};  // Host name will be WIZnetD
 
 EthernetServer server(80);
 
-void header_page(EthernetClient client, int request_status = 200) {   // The first half of the common PHP file
+void header_page(EthernetClient client, int request_status = 200) {  
   client.println("HTTP/1.1 " + String(request_status) + " Not found");
   client.println("Content-Type: text/html");
   client.println("Connection: close");  // the connection will be closed after completion of the response
