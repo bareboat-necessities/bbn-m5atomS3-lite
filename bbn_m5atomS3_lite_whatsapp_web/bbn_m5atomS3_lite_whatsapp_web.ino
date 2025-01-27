@@ -59,7 +59,7 @@ unsigned long byteCount = 0;
 bool printWebData = true;  // set to false for better speed measurement
 
 void header_page(EthernetClient client, int request_status = 200) {
-  client.println("HTTP/1.1 " + String(request_status) + (request_status == 200 ? "OK" : "Not Found"));
+  client.println("HTTP/1.1 " + String(request_status) + (request_status == 200 ? String(" OK") : String(" Not Found")));
   client.println("Content-Type: text/html");
   client.println("Connection: close");  // the connection will be closed after completion of the response
   client.println();
