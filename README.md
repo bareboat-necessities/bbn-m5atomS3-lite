@@ -19,7 +19,7 @@ The sensors stream NMEA-0183 XDR sentences via USB
 - [Water Quality Meter Ocean TDS (Total Dissolved Solids) CQRSENTDS01](https://github.com/bareboat-necessities/bbn-m5atomS3-lite/tree/main/bbn_m5atomS3_lite_TDS_CQRSENTDS01)
 - [Encoder with STM32F030](https://github.com/bareboat-necessities/bbn-m5atomS3-lite/tree/main/bbn_m5atomS3_lite_encoder_unit)
 - [M5Stack Limit Switch (Hatch open/close sensor, etc)](https://github.com/bareboat-necessities/bbn-m5atomS3-lite/tree/main/bbn_m5atomS3_lite_limit_switch)
-- [M5Stack PIR Motion Sensor (AS312)](https://github.com/bareboat-necessities/bbn-m5atomS3-lite/tree/main/bbn_m5atomS3_lite_PIR_motion)
+- [M5Stack PIR Motion Sensor (AS312) (Intruder alert, etc)](https://github.com/bareboat-necessities/bbn-m5atomS3-lite/tree/main/bbn_m5atomS3_lite_PIR_motion)
 - [M5Stack GPS with AT6558](https://github.com/bareboat-necessities/bbn-m5atomS3-lite/tree/main/bbn_m5atomS3_lite_GPS_AT6558)
 - [Time-of-Flight Distance Ranging Sensor Unit (VL53L0X)](https://github.com/bareboat-necessities/bbn-m5atomS3-lite/tree/main/bbn_m5atomS3_lite_VL53L0X_range)
 - [Benewake TFmini-S UART LiDAR sensor (Bilge level, etc)](https://github.com/bareboat-necessities/bbn-m5atomS3-lite/tree/main/bbn_m5atomS3_lite_TFminiS_range_lidar)
