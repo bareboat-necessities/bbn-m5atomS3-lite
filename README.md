@@ -24,7 +24,7 @@ The sensors stream NMEA-0183 XDR sentences via USB
 - [Time-of-Flight Distance Ranging Sensor Unit (VL53L0X)](https://github.com/bareboat-necessities/bbn-m5atomS3-lite/tree/main/bbn_m5atomS3_lite_VL53L0X_range)
 - [Benewake TFmini-S UART LiDAR sensor (Bilge level, etc)](https://github.com/bareboat-necessities/bbn-m5atomS3-lite/tree/main/bbn_m5atomS3_lite_TFminiS_range_lidar)
 - [M5Stack Angle input sensor (Wind instrument angle adjustments, etc)](https://github.com/bareboat-necessities/bbn-m5atomS3-lite/tree/main/bbn_m5atomS3_lite_angle_unit)
-- [Lightning Strike Detector Sensor AS3935](https://github.com/bareboat-necessities/bbn-m5atomS3-lite/tree/main/bbn_m5atomS3_lite_AS3935_lightning)
+- [Lightning Strike Detector Sensor AS3935 (Storm front minitoring, etc)](https://github.com/bareboat-necessities/bbn-m5atomS3-lite/tree/main/bbn_m5atomS3_lite_AS3935_lightning)
 - [Resistance 0-240 Ohm Sensor with esp32 ADC and voltage divider (Oil pressure, Fuel level, Rudder position, Trim, etc)](https://github.com/bareboat-necessities/bbn-m5atomS3-lite/blob/main/bbn_m5atomS3_lite_resistance_Ohm)
 - [Bilge Level with JSN-SR04T Waterproof Ultrasonic Sensor (Bilge level, etc)](https://github.com/bareboat-necessities/bbn-m5atomS3-lite/tree/main/bbn_m5atomS3_lite_JSN-SR04T)
 - [Fuel Level](https://github.com/bareboat-necessities/bbn-m5atomS3-lite/tree/main/bbn_m5atomS3_lite_fuel_level)
