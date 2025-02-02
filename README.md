@@ -58,19 +58,6 @@ For required libraries and their versions see .github/workflows/build.yaml
 
 ## Mounting m5stack products
 
-m5stack SandwichC Brick:
-
-https://shop.m5stack.com/products/sandwichc-brick
-
-
-m5stack ClipB Brick:
-
-https://shop.m5stack.com/products/m5stack-clip-b-brick-kit
-
-m5stack ClipA Brick:
-
-https://shop.m5stack.com/products/m5stack-clip-a-brick-kit
-
 m5stack Screw Kit:
 
 https://shop.m5stack.com/products/16-pcs-m3-12-18-25-32-screw-with-allen-key
@@ -92,8 +79,6 @@ https://www.sparkfun.com/products/15109
 VH3.96 - 4Pin Transfer Module Unit
 
 https://shop.m5stack.com/products/3-96-transfer-unit
-
-
 
 Ideas for enclosures:   https://www.polycase.com/
 
