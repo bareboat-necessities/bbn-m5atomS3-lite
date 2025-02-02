@@ -1,10 +1,5 @@
 /**
    @Hardware: M5AtomS3 + Atomic PoE Base
-   @Platform Version: Arduino M5Stack Board Manager v2.0.9
-   @Dependent Library:
-   M5AtomS3: https://github.com/m5stack/M5AtomS3
-   M5Unified: https://github.com/m5stack/M5Unified
-   M5_Ethernet: https://github.com/m5stack/M5-Ethernet
 */
 
 #include <M5AtomS3.h>  // M5AtomLiteS3
@@ -43,64 +38,135 @@ const int rand_pin = 2; // 34 /* atom-lite */;
 EthernetClient base_client;
 SSLClient ssl_client(base_client, TAs, (size_t)TAs_NUM, rand_pin);
 
-// Variables to measure the speed
-unsigned long beginMicros, endMicros;
 unsigned long byteCount = 0;
-bool printWebData = true;  // set to false for better speed measurement
 
-const char settings_page[] PROGMEM = R"=====(
-<!DOCTYPE HTML>
-<html>
-<body>
+const char style[] PROGMEM = R"=====(
+body {
+  font-family: Arial, sans-serif;
+  background-color: #121212;
+  color: #e0e0e0;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.form-container {
+  background-color: #1e1e1e;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  max-width: 400px;
+  width: 100%;
+}
+.form-container h1 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #ffffff;
+}
+.form-container label {
+  font-weight: bold;
+  color: #bbbbbb;
+}
+.form-container input[type="text"] {
+  width: 100%;
+  padding: 0.75rem;
+  margin: 0.5rem 0 1rem 0;
+  border: 1px solid #444;
+  border-radius: 4px;
+  font-size: 1rem;
+  background-color: #2d2d2d;
+  color: #e0e0e0;
+}
+.form-container input[type="text"]::placeholder {
+  color: #888;
+}
+.form-container input[type="submit"] {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.form-container input[type="submit"]:hover {
+  background-color: #0056b3;
+}
+.form-container a {
+  color: #007bff;
+  text-decoration: none;
+}
+.form-container a:hover {
+  text-decoration: underline;
+}
+)=====";
+
+const char form[] PROGMEM = R"=====(
 <form id="form" method="GET" action="/settings">
-    Enter your phone number and generated CallMeBot API key for WhatsApp (see:
-    <a target="_blank" rel="noopener noreferrer" href="https://www.callmebot.com/blog/free-api-whatsapp-messages/">the link</a>)<br>
-    <br>
-    <label for="phone">&nbsp;Phone number starting with + followed by country code and the rest of the number (digits only):</label><br><br>
-    <input id="phone" type="text" name="phone" value="" placeholder="Phone.."><br><br>
-    <br>
-    <label for="api_key">&nbsp;API Key:</label><br><br>
-    <input id="api_key" type="text" name="api_key" value="" placeholder="API Key.."><br><br>
-    <br>
-    <input id="button" type="submit" value="Submit">
+  <p>
+    Enter your phone number and generated CallMeBot API key for WhatsApp. For more details, see:
+    <a target="_blank" rel="noopener noreferrer"
+     href="https://www.callmebot.com/blog/free-api-whatsapp-messages/">this guide</a>.
+  </p>
+  <label for="phone">Phone Number:</label>
+  <input id="phone" type="text" name="phone" value="" placeholder="+CountryCodeNumber" required>
+  <label for="api_key">API Key:</label>
+  <input id="api_key" type="text" name="api_key" value="" placeholder="API Key" required>
+  <input id="button" type="submit" value="Submit">
 </form>
 )=====";
 
-void header_page(EthernetClient client, int request_status = 200) {
+const char settings_page[] PROGMEM = R"=====(
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WhatsApp API Configuration</title>
+  <style>
+%s
+  </style>
+</head>
+<body>
+<div class="form-container">
+  <h1>WhatsApp API Configuration</h1>
+%s
+</div>
+</body>
+</html>
+)=====";
+
+void begin_response(EthernetClient client, int request_status = 200) {
   client.println("HTTP/1.1 " + String(request_status) + (request_status == 200 ? String(" OK") : String(" Not Found")));
   client.println("Content-Type: text/html");
   client.println("Connection: close");  // the connection will be closed after completion of the response
-  client.print(settings_page);
+}
+
+void main_page(EthernetClient client, int request_status = 200) {
+  begin_response(client, request_status);
+  client.printf(settings_page, style, form);
   client.println();
 }
 
-void footer_page(EthernetClient client) {   // The closing lines of every page
-  client.println("</body></html>");
+void error_page(EthernetClient client, int request_status = 200) {
+  begin_response(client, request_status);
 }
 
 void handle_OnConnect(EthernetClient client) {
-  header_page(client);
-  client.println("<a class=\"button button-on\" href=\"/ledOn\">LOW</a>");
-  footer_page(client);
-  Serial.println("Connection!\nQ: OFF");
+  main_page(client);
+  Serial.println("Connection!");
 }
 
-void handle_ledOn(EthernetClient client) {
-  header_page(client);
-  client.println("<a class=\"button button-on\" href=\"/ledOff\">HIGH</a>");
-  footer_page(client);
-  Serial.println("Q: ON");
-}
-
-void handle_ledOff(EthernetClient client) {
-  header_page(client);
-  client.println("<a class=\"button button-on\" href=\"/ledOn\">LOW</a>");
-  footer_page(client);
-  Serial.println("Q: OFF");
+void handle_OnSettings(EthernetClient client) {
+  //client.println(html_response);
+  Serial.println("Settings!");
 }
 
 void handle_NotFound(EthernetClient client, String url) {
-  header_page(client, 400);
+  error_page(client, 400);
   client.println("<a>The path " + url + " doesn't exist</a>");
   Serial.println("Error, unrecognised path");
 }
@@ -122,8 +188,7 @@ void setup() {
   // Check for Ethernet hardware present
   if (Ethernet.hardwareStatus() == EthernetNoHardware) {
     Serial.println(
-      "Ethernet shield was not found.  Sorry, can't run without "
-      "hardware. :(");
+      "Ethernet shield was not found.  Sorry, can't run without hardware. :(");
     while (true) {
       delay(1);  // do nothing, no point running without Ethernet hardware
     }
@@ -151,9 +216,9 @@ void setup() {
 
 // +international_country_code + phone number
 // Portugal +351, example: +351912345678
+// TODO:
 String phoneNumber = "REPLACE_WITH_YOUR_PHONE_NUMBER";
 String apiKey = "REPLACE_WITH_API_KEY";
-
 String message = "Test from M5 ESP32";
 
 void loop() {
@@ -184,8 +249,7 @@ void loop() {
           Serial.println(url_path.c_str());
           Serial.println(url_args.c_str());
           if (url_path == "/") handle_OnConnect(client);
-          else if (url_path == "/ledOn") handle_ledOn(client);
-          else if (url_path == "/ledOff") handle_ledOff(client);
+          else if (url_path == "/settings") handle_OnSettings(client);
           else handle_NotFound(client, url_path);
           break;
         }
@@ -217,7 +281,6 @@ void loop() {
       // if you didn't get a connection to the server:
       Serial.println("connection failed");
     }
-    beginMicros = micros();
   }
 
   if (ssl_client.connected()) {
@@ -229,31 +292,18 @@ void loop() {
         byte buffer[80];
         if (len > 80) len = 80;
         ssl_client.read(buffer, len);
-        if (printWebData) {
-          Serial.write(buffer, len); // show in the serial monitor (slows some boards)
-        }
         byteCount = byteCount + len;
       }
       delay(1);
     }
   }
 
-  // if the server's disconnected, stop the ssl_client:
+  // server's disconnected
   if (!ssl_client.connected() && byteCount > 0) {
-    endMicros = micros();
-    Serial.println();
     Serial.println("disconnecting.");
     //ssl_client.stop();
     Serial.print("Received ");
     Serial.print(byteCount);
-    Serial.print(" bytes in ");
-    float seconds = (float)(endMicros - beginMicros) / 1000000.0;
-    Serial.print(seconds, 4);
-    float rate = (float)byteCount / seconds / 1000.0;
-    Serial.print(", rate = ");
-    Serial.print(rate);
-    Serial.print(" kbytes/second");
-    Serial.println();
     byteCount = 0;
   }
 }
