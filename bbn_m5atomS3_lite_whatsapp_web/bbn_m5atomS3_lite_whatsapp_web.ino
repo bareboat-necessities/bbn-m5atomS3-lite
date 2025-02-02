@@ -1,19 +1,9 @@
 /**
-   based on:
-
-   @file HTTP.ino
-   @author SeanKwok (shaoxiang@m5stack.com)
-   @brief M5AtomS3 Atomic PoE Base HTTP Test
-   @version 0.1
-   @date 2023-12-13
-
-
    @Hardware: M5AtomS3 + Atomic PoE Base
    @Platform Version: Arduino M5Stack Board Manager v2.0.9
    @Dependent Library:
-   M5GFX: https://github.com/m5stack/M5GFX
-   M5Unified: https://github.com/m5stack/M5Unified
    M5AtomS3: https://github.com/m5stack/M5AtomS3
+   M5Unified: https://github.com/m5stack/M5Unified
    M5_Ethernet: https://github.com/m5stack/M5-Ethernet
 */
 
@@ -58,18 +48,34 @@ unsigned long beginMicros, endMicros;
 unsigned long byteCount = 0;
 bool printWebData = true;  // set to false for better speed measurement
 
+const char settings_page[] PROGMEM = R"=====(
+<!DOCTYPE HTML>
+<html>
+<body>
+<form id="form" method="GET" action="/settings">
+    Enter your phone number and generated CallMeBot API key for WhatsApp (see:
+    <a target="_blank" rel="noopener noreferrer" href="https://www.callmebot.com/blog/free-api-whatsapp-messages/">the link</a>)<br>
+    <br>
+    <label for="phone">&nbsp;Phone number starting with + followed by country code and the rest of the number (digits only):</label><br><br>
+    <input id="phone" type="text" name="phone" value="" placeholder="Phone.."><br><br>
+    <br>
+    <label for="api_key">&nbsp;API Key:</label><br><br>
+    <input id="api_key" type="text" name="api_key" value="" placeholder="API Key.."><br><br>
+    <br>
+    <input id="button" type="submit" value="Submit">
+</form>
+)=====";
+
 void header_page(EthernetClient client, int request_status = 200) {
   client.println("HTTP/1.1 " + String(request_status) + (request_status == 200 ? String(" OK") : String(" Not Found")));
   client.println("Content-Type: text/html");
   client.println("Connection: close");  // the connection will be closed after completion of the response
+  client.print(settings_page);
   client.println();
-  client.println("<!DOCTYPE HTML>");
-  client.println("<head><meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0, user-scalable=no\"><title>ESP32 Web</title><style>html { font-family: Helvetica; display: inline-block; margin: 0px auto; text-align: center;}body{margin-top: 50px;} h1 {color: #444444;margin: 50px auto 30px;} h3 {color: #444444;margin-bottom: 50px;}.button {display: block;width: 80px;background-color: #3498db;border: none;color: white;padding: 13px 30px;text-decoration: none;font-size: 25px;margin: 0px auto 35px;cursor: pointer;border-radius: 4px;}.button-on {background-color: #3498db;}.button-on:active {background-color: #2980b9;}.button-off {background-color: #34495e;}.button-off:active {background-color: #2c3e50;}p {font-size: 14px;color: #888;margin-bottom: 10px;}</style></head>");
-  client.println("<html><h2>ESP32 Web Server</h2>");
 }
 
 void footer_page(EthernetClient client) {   // The closing lines of every page
-  client.println("</html>");
+  client.println("</body></html>");
 }
 
 void handle_OnConnect(EthernetClient client) {
