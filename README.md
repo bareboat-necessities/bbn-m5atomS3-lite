@@ -80,6 +80,8 @@ VH3.96 - 4Pin Transfer Module Unit
 
 https://shop.m5stack.com/products/3-96-transfer-unit
 
+M3 Standoffs and nuts
+
 Cable glands of various sizes
 
 Inserts for cable glands of various sizes and of various number of holes
