@@ -80,6 +80,10 @@ VH3.96 - 4Pin Transfer Module Unit
 
 https://shop.m5stack.com/products/3-96-transfer-unit
 
+Cable glands of various sizes
+
+Inserts for cable glands of various sizes and of various number of holes
+
 Ideas for enclosures:   https://www.polycase.com/
 
 LTC4311 I2C Extender / Active Terminator
