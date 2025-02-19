@@ -9,6 +9,9 @@
 #ifndef _UNIT_ENCODER_H_
 #define _UNIT_ENCODER_H_
 
+#include <Arduino.h>
+#include <Wire.h>
+
 #define ENCODER_ADDR 0x40
 #define ENCODER_REG  0x10
 #define BUTTON_REG   0x20
