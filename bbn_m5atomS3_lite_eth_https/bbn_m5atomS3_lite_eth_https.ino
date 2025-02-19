@@ -16,7 +16,7 @@
  
  */
  
-#include <M5AtomS3.h>
+#include <M5Unified.h>
 #include <Arduino.h>
 #include <SPI.h>
 #include <EthernetLarge.h>
