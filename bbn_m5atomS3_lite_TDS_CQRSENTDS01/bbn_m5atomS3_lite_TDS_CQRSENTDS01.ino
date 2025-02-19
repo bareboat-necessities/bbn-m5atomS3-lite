@@ -1,4 +1,4 @@
-#include <M5AtomS3.h>
+#include <M5Unified.h>
 #include <Arduino.h>
 #include "NmeaXDR.h"
 #include "CQRobotTDS.h"
@@ -12,7 +12,7 @@ unsigned long timeout = 0;
 
 void setup() {
   auto cfg = M5.config();
-  AtomS3.begin(cfg);
+  M5.begin(cfg);
   pinMode(TDS_pin, INPUT);
   Serial.begin(4800);
 }
