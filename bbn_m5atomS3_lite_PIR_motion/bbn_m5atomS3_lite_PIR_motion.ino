@@ -1,4 +1,4 @@
-#include <M5AtomS3.h>
+#include <M5Unified.h>
 #include "NmeaXDR.h"
 
 /*
@@ -10,7 +10,7 @@
 
 void setup() {
   auto cfg = M5.config();
-  AtomS3.begin(cfg);
+  M5.begin(cfg);
   Serial.begin(4800);
   pinMode(PIR_MOTION_PIN, INPUT);
   digitalRead(PIR_MOTION_PIN);
