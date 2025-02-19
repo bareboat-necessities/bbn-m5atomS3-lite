@@ -1,4 +1,4 @@
-#include <M5AtomS3.h>
+#include <M5Unified.h>
 #include <Adafruit_VL53L0X.h>
 #include "NmeaXDR.h"
 #include "Nmea0183Msg.h"
@@ -9,7 +9,7 @@ const char* VL53L0X_NAME = "VL53L0X";
 
 void setup() {
   auto cfg = M5.config();
-  AtomS3.begin(cfg);
+  M5.begin(cfg);
   Wire.begin();
   Serial.begin(4800);
 
