@@ -1,4 +1,3 @@
-#include <M5AtomS3.h>
 #include <M5Unified.h>
 #include <Arduino.h>
 #include <M5_ADS1115.h>
@@ -22,7 +21,7 @@ float calibration_factor = 0.0;
 
 void setup() {
   auto cfg = M5.config();
-  AtomS3.begin(cfg);
+  M5.begin(cfg);
   Wire.begin();
   Serial.begin(4800);
   while (!Vmeter.begin(&Wire, M5_UNIT_VMETER_I2C_ADDR, G2, G1, 100000U)) {
