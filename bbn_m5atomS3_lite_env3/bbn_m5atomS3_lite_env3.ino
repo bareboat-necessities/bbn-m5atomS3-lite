@@ -1,6 +1,5 @@
 #include <M5Unified.h>
 #include <M5UnitENV.h>
-#include <Wire.h>
 #include "NmeaXDR.h"
 #include "Nmea0183Msg.h"
 
