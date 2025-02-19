@@ -1,6 +1,7 @@
 #include <Arduino.h>
-#include <M5Unified.h>
 #include <Wire.h>
+#include <M5Unified.h>
+
 
 #include "NmeaXDR.h"
 #include "NmeaChecksum.h"
