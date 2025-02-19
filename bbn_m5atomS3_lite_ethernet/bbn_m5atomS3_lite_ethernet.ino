@@ -18,10 +18,7 @@
  * ArduinoHttpClient: https://github.com/arduino-libraries/ArduinoHttpClient
  */
 
-#include <M5AtomS3.h>
-
-//#include <M5Atom.h>  // M5AtomLite
-
+#include <M5Unified.h>
 #include <Arduino.h>
 #include <SPI.h>
 #include <M5_Ethernet.h>
