@@ -1,4 +1,4 @@
-#include <M5AtomS3.h>
+#include <M5Unified.h>
 #include <Arduino.h>
 #include <Wire.h>
 #include <Adafruit_SGP30.h>
@@ -9,7 +9,7 @@ Adafruit_SGP30 sgp;
 
 void setup() {
   auto cfg = M5.config();
-  AtomS3.begin(cfg);
+  M5.begin(cfg);
   Serial.begin(4800);
   Wire.begin();
   Wire.setClock(100000);
