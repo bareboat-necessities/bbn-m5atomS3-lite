@@ -1,5 +1,5 @@
 #include <OneWire.h>
-#include <M5AtomS3.h>
+#include <M5Unified.h>
 #include <DallasTemperature.h>
 #include "Nmea0183Msg.h"
 
@@ -9,7 +9,7 @@ DallasTemperature sensors(&oneWire);
 
 void setup() {
   auto cfg = M5.config();
-  AtomS3.begin(cfg);
+  M5.begin(cfg);
   Serial.begin(4800);
   sensors.begin();
   int count = sensors.getDeviceCount();
