@@ -1,4 +1,3 @@
-#include <M5AtomS3.h>
 #include <M5Unified.h>
 #include <Arduino.h>
 #include <Wire.h>
@@ -9,7 +8,7 @@ M5_DLight sensor;
 
 void setup() {
   auto cfg = M5.config();
-  AtomS3.begin(cfg);
+  M5.begin(cfg);
   Wire.begin();
   Serial.begin(4800);
   sensor.begin();
