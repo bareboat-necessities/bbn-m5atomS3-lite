@@ -1,7 +1,7 @@
 #ifndef __MODULE_4_20MA_H
 #define __MODULE_4_20MA_H
 
-#include <M5Unified.h>
+#include <Arduino.h>
 #include <Wire.h>
 
 #define MODULE_4_20MA_ADDR          0x55
