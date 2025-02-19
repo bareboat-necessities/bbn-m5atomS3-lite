@@ -1,4 +1,4 @@
-#include <M5AtomS3.h>
+#include <M5Unified.h>
 #include "NmeaXDR.h"
 
 #define LIMIT_SWITCH_PIN G8
@@ -12,7 +12,7 @@ LimitSwitch limit_switch;
 
 void setup() {
   auto cfg = M5.config();
-  AtomS3.begin(cfg);
+  M5.begin(cfg);
   Serial.begin(4800);
 
   pinMode(LIMIT_SWITCH_PIN, INPUT_PULLUP);
