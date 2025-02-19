@@ -1,4 +1,4 @@
-#include <M5AtomS3.h>
+#include <M5Unified.h>
 #include "NmeaXDR.h"
 #include "ResistanceSensor.h"
 
@@ -8,7 +8,7 @@ ResistanceSensor resistanceSens;
 
 void setup() {
   auto cfg = M5.config();
-  AtomS3.begin(cfg);
+  M5.begin(cfg);
   ResistanceSensor_init(&resistanceSens, G8, DOWNSTREAM, 3.3, 100.0);
   Serial.begin(4800);
 }
