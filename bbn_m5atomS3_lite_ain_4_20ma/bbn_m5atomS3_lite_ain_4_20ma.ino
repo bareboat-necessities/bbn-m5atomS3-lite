@@ -1,8 +1,9 @@
 #include <M5Unified.h>
+#include <Wire.h>
 
-#include "MODULE_4_20MA.h"
 #include "NmeaXDR.h"
 #include "NmeaChecksum.h"
+#include "MODULE_4_20MA.h"
 
 MODULE_4_20MA meter;
 
