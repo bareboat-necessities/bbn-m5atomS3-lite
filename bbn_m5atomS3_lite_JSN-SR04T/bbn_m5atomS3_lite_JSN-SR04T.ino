@@ -1,4 +1,4 @@
-#include <M5AtomS3.h>
+#include <M5Unified.h>
 #include <NewPing.h>
 #include "NmeaXDR.h"
 
@@ -13,7 +13,7 @@ float factor = sqrt(1 + temp / 273.15) / 60.368; // Speed of sound calculation b
 
 void setup() {
   auto cfg = M5.config();
-  AtomS3.begin(cfg);
+  M5.begin(cfg);
   Serial.begin(4800);
 }
 
