@@ -1,10 +1,9 @@
 #include <Arduino.h>
 #include <Wire.h>
+#include "Unit_Encoder.h"
 #include <M5Unified.h>
-
 #include "NmeaXDR.h"
 #include "NmeaChecksum.h"
-#include "Unit_Encoder.h"
 
 Unit_Encoder sensor;
 signed short int last_encoder_value = 0;
