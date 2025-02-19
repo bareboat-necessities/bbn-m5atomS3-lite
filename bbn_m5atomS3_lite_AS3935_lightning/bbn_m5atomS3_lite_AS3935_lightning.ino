@@ -23,7 +23,7 @@ byte lightningThresh = 0;
 
 void setup() {
   auto cfg = M5.config();
-  AtomS3.begin(cfg);
+  M5.begin(cfg);
   Serial.begin(4800);
 
   Wire.begin(G2 /* SDA */, G1 /* SCL */, 100000UL);
