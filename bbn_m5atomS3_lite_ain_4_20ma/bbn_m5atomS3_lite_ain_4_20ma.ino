@@ -1,4 +1,4 @@
-#include <M5AtomS3.h>
+#include <M5Unified.h>
 #include "MODULE_4_20MA.h"
 #include "NmeaXDR.h"
 #include "NmeaChecksum.h"
@@ -11,7 +11,7 @@ void show_current_value(void) {
 
 void setup() {
   auto cfg = M5.config();
-  AtomS3.begin(cfg);
+  M5.begin(cfg);
   Wire.begin();
   Serial.begin(4800);
   while (!(meter.begin(&Wire, MODULE_4_20MA_ADDR, G2, G1, 100000UL))) ;
