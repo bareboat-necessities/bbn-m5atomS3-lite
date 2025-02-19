@@ -1,5 +1,4 @@
 #include <M5Unified.h>
-#include <Arduino.h>
 #include <Wire.h>
 #include "Unit_Encoder.h"
 #include "NmeaXDR.h"
