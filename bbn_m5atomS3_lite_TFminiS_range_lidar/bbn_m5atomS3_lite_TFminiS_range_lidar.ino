@@ -1,4 +1,4 @@
-#include <M5AtomS3.h>
+#include <M5Unified.h>
 #include "NmeaXDR.h"
 
 /*
@@ -37,7 +37,7 @@ unsigned long previousMillis = 0UL;
 
 void setup() {
   auto cfg = M5.config();
-  AtomS3.begin(cfg);
+  M5.begin(cfg);
   Serial.begin(4800);
   Serial2.begin(115200, SERIAL_8N1, RXD2, TXD2);
 }
