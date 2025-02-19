@@ -1,4 +1,4 @@
-#include <M5AtomS3.h>
+#include <M5Unified.h>
 #include <M5UnitENV.h>
 #include <Wire.h>
 #include "NmeaXDR.h"
@@ -9,7 +9,7 @@ QMP6988 qmp6988;
 
 void setup() {
   auto cfg = M5.config();
-  AtomS3.begin(cfg);
+  M5.begin(cfg);
   Wire.begin();
   Serial.begin(4800);
 
