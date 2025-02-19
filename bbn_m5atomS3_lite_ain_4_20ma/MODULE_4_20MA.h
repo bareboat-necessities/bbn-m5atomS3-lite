@@ -1,8 +1,6 @@
 #ifndef __MODULE_4_20MA_H
 #define __MODULE_4_20MA_H
 
-#include <Wire.h>
-
 #define MODULE_4_20MA_ADDR          0x55
 #define MODULE_4_20MA_ADC_12BIT_REG 0x00
 #define MODULE_4_20MA_CURRENT_REG   0x20
