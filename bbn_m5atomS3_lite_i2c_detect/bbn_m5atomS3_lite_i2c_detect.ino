@@ -7,9 +7,9 @@
   See: https://github.com/technoblogy/i2c-detective/blob/main/I2CDetectiveClue.ino
   
 */
-
-#include <M5Unified.h>
+#include <Arduino.h>
 #include <Wire.h>
+#include <M5Unified.h>
 
 typedef struct {
   const char *name;
