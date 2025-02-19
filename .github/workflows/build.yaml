@@ -29,4 +29,4 @@ jobs:
         sketch-names-find-start: bbn_*/*
         extra-arduino-cli-args: "--warnings default --build-property compiler.libraries.ldflags=-Wl,--allow-multiple-definition "
         set-build-path: true
-        sketches-exclude: bbn_m5atomS3_lite_encoder_unit,bbn_m5atomS3_lite_ain_4_20ma
+
