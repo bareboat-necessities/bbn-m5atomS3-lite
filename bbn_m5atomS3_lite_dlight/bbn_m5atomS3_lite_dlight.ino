@@ -1,5 +1,4 @@
 #include <M5Unified.h>
-#include <Arduino.h>
 #include <Wire.h>
 #include <M5_DLight.h>
 #include "NmeaXDR.h"
