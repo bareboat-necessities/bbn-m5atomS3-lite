@@ -1,4 +1,4 @@
-#include <M5AtomS3.h>
+#include <M5Unified.h>
 #include <Arduino.h>
 #include <M5UnitENV.h>
 #include <Wire.h>
@@ -10,7 +10,7 @@ BMP280 bmp280;
 
 void setup() {
   auto cfg = M5.config();
-  AtomS3.begin(cfg);
+  M5.begin(cfg);
   Wire.begin();
   Serial.begin(4800);
 
