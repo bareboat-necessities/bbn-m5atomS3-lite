@@ -17,8 +17,7 @@
    M5_Ethernet: https://github.com/m5stack/M5-Ethernet
 */
 
-#include <M5AtomS3.h>  // M5AtomLiteS3
-//#include <M5Atom.h>  // M5AtomLite
+#include <M5Unified.h>  
 
 #include <Arduino.h>
 #include <SPI.h>
