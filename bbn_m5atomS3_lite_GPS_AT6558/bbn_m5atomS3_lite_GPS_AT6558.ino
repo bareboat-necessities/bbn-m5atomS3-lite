@@ -1,4 +1,4 @@
-#include <M5AtomS3.h>
+#include <M5Unified.h>
 
 /*
    https://docs.m5stack.com/en/unit/gps
@@ -19,7 +19,7 @@
 
 void setup() {
   auto cfg = M5.config();
-  AtomS3.begin(cfg);
+  M5.begin(cfg);
   Serial.begin(9600);
   Serial2.begin(9600, SERIAL_8N1, G6, G5);  // UART pins when GPS is plugged into port C of ATOMIC PortABC Extension Base 
   //Serial2.begin(9600, SERIAL_8N1, G1, G2);  // UART pins when GPS is plugged directly into grove port of M5 AtomS3-lite 
