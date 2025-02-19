@@ -1,6 +1,4 @@
-#include <M5AtomS3.h>
 #include <M5Unified.h>
-#include <Arduino.h>
 #include <Wire.h>
 #include "MODULE_4_20MA.h"
 #include "NmeaXDR.h"
