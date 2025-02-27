@@ -10,6 +10,7 @@ DallasTemperature sensors(&oneWire);
 void setup() {
   auto cfg = M5.config();
   M5.begin(cfg);
+  pinMode(ONE_WIRE_BUS, INPUT);
   Serial.begin(4800);
   sensors.begin();
   int count = sensors.getDeviceCount();
