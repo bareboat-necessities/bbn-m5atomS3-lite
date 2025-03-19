@@ -6,7 +6,7 @@ You would need to modify the code to put your WhatsApp phone number and generate
 before compiling and uploading the sketch to AtomS3-Lite with AtomPoE Base
 
 Instructions to generate API key:
-https://www.callmebot.com/blog/free-api-whatsapp-messages/
+https://www.callmebot.com/
 
 
 
